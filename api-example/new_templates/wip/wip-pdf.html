@@ -1,0 +1,65 @@
+{% extends "pdf-base.html" %}
+
+
+{% block html %}
+
+{{ html }}
+
+{% endblock %}
+
+
+{% block content %}
+
+<h1 style="text-align: center;">Work In Progress Report: {{ wip_report.name }}</h1>
+<h1 style="text-align: center;"><small>{{ now }}</small></h1>
+
+				{% if wip_report.agenda %}
+				<h2>Agenda</h2>
+				<p>{{ wip_report.agenda|safe }}
+				<br>
+				{% endif %}
+
+			
+				{% if objectives %}
+				<h2>Objectives</h2>
+				<ul>
+				{% for o in objectives %}
+					<li><a href="#work_item_{{ o.id }}">{{ o.description|truncatewords:15 }} - 
+							{% if o.assignee.get_full_name %}{{ o.assignee.get_full_name }}{% else %}{{ o.assignee.username }}{% endif %}</a>
+	
+				{% endfor %}
+				</ul>
+				{% endif %}
+
+				<h2>Work Items</h2>			
+				<p>
+						
+				{% for h in headings %}
+					{% for i in h.wip_items.all %}
+					{% ifequal i.complete 0 %}
+				<table class="pdf-table" border="1" cellpadding="2" cellspacing="2">
+  				<tbody>
+					<tr><th width="25%">Company:</th><td>{{ h.company }}</td></tr>
+					<tr><th>Heading:</th><td>{{ h }}</td></tr>
+	
+					<tr><th>Description:</th><td>{{ i.description|linebreaks }}</td></tr>
+					<tr><th>History:</th><td>{{ i.history|linebreaks }}</td></tr>
+					<tr><th>Assigned To:</th><td>{% if i.assignee.get_full_name %}{{ i.assignee.get_full_name }}{% else %} {{ i.assignee }} {% endif %}</td></tr>
+					<tr><th>Objective:</th><td> {{ i.objective|yesno:"Yes,No" }} </td></tr>
+					<tr><th>Created:</th><td>{{ i.created_date|timesince }} ago</td></tr>
+					{% if i.deadline %}<tr><th>Deadline: </th><td> {{ i.deadline }}</td></tr>{% endif %}
+					<tr><th>Updated:</th><td>{{ i.modified_date|timesince }} ago</td></tr>
+				</tbody>
+				</table>
+				<br>
+				<br>
+				<br>
+					{% endifequal %}
+					{% endfor %}	
+
+
+
+						
+				{% endfor %}	
+
+{% endblock %}

@@ -1,0 +1,72 @@
+CMS settings
+=============
+
+To override settings in cms/cms_global_settings.py, you must set them 
+in your project's settings.py file. 
+
+For example, the cms_gloabl_settings.py defines SITE_TITLE to 'Your Site' 
+as a default value.  To change this, add: 
+ 
+CMS_SITE_TITLE = "Your NEW Site Title" 
+
+to the project's settings.py file. 
+ 
+Notice that "CMS_" has been prepended to the setting name, this is the 
+case with all overridden settings. 
+ 
+You'll probably want to change the following settings from their 
+default values: 
+ 
+CMS_SITE_TITLE 
+CMS_DEFAULT_TEMPLATE 
+CMS_SITE_NAME 
+
+Other settings can be found in /path-to-cms-app/cms_global_settings.py 
+
+Setup media files and templates
+===============================
+
+In your project directory:
+
+mkdir site_media
+cd site_media
+ln -s <path-to-django-cms>/cms/media/cms cms
+
+urls.py
+=======
+
+urlpatterns = patterns('',
+    (r'^admin/', include('django.contrib.admin.urls')),
+    (r'', include('cms.urls')),
+)
+
+
+settings.py
+===========
+
+Make sure LocaleMiddleware (either cms.middleware.locale.LocaleMiddleware or 
+django.middleware.locale.LocaleMiddleware) is in your MIDDLEWARE_CLASSES:
+
+MIDDLEWARE_CLASSES = (
+    'cms.middleware.util.BenchmarkMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.middleware.doc.XViewMiddleware',
+    'cms.middleware.util.XHTMLToHTMLMiddleware',
+)
+
+INSTALLED_APPS = (
+    ...
+    'django.contrib.admin',
+    'cms',
+)
+
+Also the app template loader needs to be enabled -- TEMPLATE_LOADERS should 
+look something like this:
+
+TEMPLATE_LOADERS = (
+    'django.template.loaders.filesystem.load_template_source',
+    'django.template.loaders.app_directories.load_template_source',
+)

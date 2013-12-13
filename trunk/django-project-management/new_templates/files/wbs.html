@@ -1,0 +1,49 @@
+{% extends "pdf-base.html" %}
+{% load wbs_tags %}
+{% load project_tags %}
+
+
+
+{% block content %}
+
+<h1>Work Breakdown Structure: {{ project.project_name }}</h1>
+				<table class="pdf-table" repeat="1">
+					<tr class="first_row"> <th width="20">WBS</th><th>Description</th><th>Start Date</th><th>Finish Date</th><th>Owner</th><th>Duration ({{ project.get_duration_type_display }})</th><th>Engineering Days Booked</th><th width="50">% Complete</th></tr>
+					{% for w in project.work_items.all %}
+
+						{% if w.active %}
+						<tr> 
+							<td>{{ w.wbs_number }}</td>
+							<td><b>{{ w.title }}</b><br>{{ w.description|linebreaks }}</td>
+							<td>{{ w.start_date|date:"jS M y" }}</td>
+							<td>{{ w.finish_date|date:"jS M y" }}</td>
+							<td>{% if w.owner.get_full_name %} {{ w.owner.get_full_name }} {% else %} {{ w.owner|default_if_none:"No Owner" }} {% endif %}</td>
+							<td>{{ w.duration|default_if_none:"Not Set" }}</td>
+							<td>{% if w.engineering_days.all  %} {% for day in w.engineering_days.all %}<li>{{ day.work_date|date:"jS M y" }} - {% get_initials_for_user day.resource %}</li> {% endfor %} {% else %} {% endif %}</td> 
+							<td>{{ w.percent_complete|default_if_none:"0" }} %</td>
+						</tr>
+
+						{% endif %}
+
+					{% endfor %}
+				</table>
+					{% comment %}
+
+		{% for w in project.work_items.all %}
+				{% if forloop.first %}
+				<table>
+					<tr><th>Date</th><th>WBS</th><th>Day Type</th><th>Resource</th></tr>
+				{% endif %}
+			{% for day in w.engineering_days.all %}
+
+					<tr><td>{{ day.work_date }}</td><td>{{ day.work_item.all.0.title }}</td>
+						<td>{{ day.get_day_type_display }}</td>
+						<td> {% if day.resource.get_full_name %}{{ day.resource.get_full_name }} {% else %}{{ day.resource.username }}{% endif %}</td></tr>
+
+			{% endfor %}
+				{% if forloop.last %}
+					</table>
+				{% endif %}
+		{% endfor %}
+{% endcomment %}
+{% endblock %}

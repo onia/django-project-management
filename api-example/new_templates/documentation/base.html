@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load i18n cms_base %}
+
+
+{% block main_content %}
+
+<div id="center_panel_html">
+
+	<h3><a href="#">{{ title }}</a></h3>
+
+	<div class="breadcrumbs"> {% cms_breadcrumbs %} </div>
+		
+	<hr>
+
+	<div class="content">
+		{% block content %}
+			{{ content }}
+		{% endblock %}
+	</div>
+
+	<hr>
+
+	{% cms_subpages page as subpages %}
+		{% if subpages %}
+    		<h3>Sub Pages</h3>
+    			<ul id="subpages_menu">
+        			{% for subpage in subpages %}<li><a href="{% cms_link subpage %}">{{ subpage.title|escape }}</a></li>{% endfor %}
+    			</ul>
+		{% endif %}
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,4 @@
+<script type="text/javascript" src="WindowAddRisk.ui.js"></script>
+<script type="text/javascript" src="WindowAddRisk.js"></script>
+<script type="text/javascript" src="StoreRiskCounterMeasure.js"></script>
+<script type="text/javascript" src="StoreRiskStatus.js"></script>

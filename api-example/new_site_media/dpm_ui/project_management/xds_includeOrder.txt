@@ -1,0 +1,7 @@
+<script type="text/javascript" src="MyPanel.ui.js"></script>
+<script type="text/javascript" src="MyPanel.js"></script>
+<script type="text/javascript" src="StoreDeliverables.js"></script>
+<script type="text/javascript" src="StoreRisks.js"></script>
+<script type="text/javascript" src="StoreResources.js"></script>
+<script type="text/javascript" src="StoreStagePlan.js"></script>
+<script type="text/javascript" src="StoreWBS.js"></script>

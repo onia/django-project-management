@@ -1,0 +1,52 @@
+.project_table tr td { padding: 5px; font-family:arial,tahoma,helvetica,sans-serif; font-size:11px; font-size-adjust:none; font-style:normal; font-variant:normal; font-weight:normal; }
+.project_table tr th { vertical-align: top; padding: 5px; font-family:arial,tahoma,helvetica,sans-serif; font-size:11px; font-size-adjust:none; font-style:normal; font-variant:normal; font-weight:bold; }
+
+.documentation_status_red { background-color:red; color:white; padding:5px; }
+.documentation_status_red a { color:white; }
+.documentation_status_amber { background-color:#FF9900; color:white; padding:5px; }
+.documentation_status_amber a { color:white; }
+.documentation_status_green { color:white; padding:5px; background-image:url(/site_media/img/green-stripe.png); }
+.documentation_status_green a { color:white; }
+
+
+.rag_status_red { color:white; padding:5px; background-image:url(/site_media/img/red-stripe.png); }
+.rag_status_red a { color:white; }
+.rag_status_amber { color:white; padding:5px; background-image:url(/site_media/img/orange-stripe.png);}
+.rag_status_amber a { color:white; }
+.rag_status_green { color:white; padding:5px; background-image:url(/site_media/img/green-stripe.png); }
+.rag_status_green a { color:white; }
+.rag_status_blue { color:white; padding:5px; background-image:url(/site_media/img/blue-stripe.png); }
+.rag_status_blue a { color:white; }
+.rag_status_grey { background-color:gray; color:white; padding:5px; background-image:url(/site_media/img/grey-stripe.png); }
+.rag_status_grey a { color:white; }
+.rag_status_white { background-color:white; color: black; padding:5px; }
+.rag_status_white a { color:white; }
+
+
+
+.rag_status_red-selected { color:white; padding:5px; background-image:url(/site_media/img/red-stripe-hover.png); }
+.rag_status_amber-selected { color:white; padding:5px; background-image:url(/site_media/img/orange-stripe-hover.png);}
+.rag_status_green-selected { color:white; padding:5px; background-image:url(/site_media/img/green-stripe-hover.png); }
+.rag_status_blue-selected { background-color:blue; color:white; padding:5px; }
+.rag_status_grey-selected { background-color:gray; color:white; padding:5px; }
+.rag_status_white-selected { background-color:#DFE8F6; color: black; padding:5px; }
+
+
+.rag_status_red-hover { color:black; padding:5px; background-image:url(/site_media/img/red-stripe-hover.png); }
+.rag_status_amber-hover { color:black; padding:5px; background-image:url(/site_media/img/orange-stripe-hover.png); }
+.rag_status_green-hover { color:black; padding:5px; background-image:url(/site_media/img/green-stripe-hover.png); }
+.rag_status_blue-hover { background-color:cyan; color:black; padding:5px; }
+.rag_status_grey-hover { background-color:black; color:white; padding:5px; }
+.rag_status_white-hover { background-color:#EFEFEF; color: white; padding:5px; }
+
+
+.icon-add { background-image:url(/site_media/js/ext-3.2.0/examples/shared/icons/fam/add.png) !important; } 
+.icon-update { background-image:url(/site_media/js/ext-3.2.0/examples/shared/icons/fam/cog_edit.png) !important; } 
+.icon-complete { background-image:url(/site_media/js/ext-3.2.0/examples/shared/icons/fam/delete.gif) !important; } 
+
+.upload-icon { background: url('/site_media/js/ext-3.2.0/examples/shared/icons/fam/image_add.png') no-repeat 0 0 !important; }
+
+.content {font-family:arial,tahoma,helvetica,sans-serif; font-size:11px; font-size-adjust:none; font-style:normal; font-variant:normal; font-weight:normal;}
+.content strong {font-family:arial,tahoma,helvetica,sans-serif; font-size:13px; font-size-adjust:none; font-variant:normal; font-weight: bold;}
+.breadcrumbs {}
+#subpages_menu {font-family:arial,tahoma,helvetica,sans-serif; font-size:11px; font-size-adjust:none; font-style:normal; font-variant:normal; font-weight:normal;}

@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+  		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+		<title>{{ title }}</title>
+
+
+		<style>
+		@page {
+			margin: 1.25cm;
+			margin-bottom: 2.5cm;
+			size: {% if paper_size %}{{ paper_size }}{% else %}a4{% endif %} {% if paper_orientation %}{{ paper_orientation }}{% else %}portrait{% endif %};
+
+  
+		@frame pageNumber {
+			-pdf-frame-content: pageNumber;
+			top: 27cm;
+			bottom: 0cm;
+			margin-left: 0.5cm;
+			margin-right: 1cm;
+			height: 1.55cm;
+			right: 17.5cm;
+			left: 0cm;
+			vertical-align: middle;
+		 }
+
+
+		@frame footerBar {
+			-pdf-frame-content: footerBar;
+			bottom: 0cm;
+			margin-left: 1cm;
+			margin-right: 0.5cm;
+			height: 1.55cm;
+			left: 2.5cm;
+		}
+
+		}
+
+		table.pdf-table { -pdf-keep-in-frame-mode: shrink; text-align: left; width: 100%; border-spacing: 2px; border-color: gray gray gray gray; border-style: dashed; }	
+		table.pdf-table td, th { vertical-align: top; padding: 3px 3px 3px 3px; border-spacing: 2px; border-color: gray gray gray gray; border-style: dashed; }
+		table.pdf-table th { background-color: #E0E0E0;  color: #333333; font-weight: bold; }
+
+
+		td.bold { font-weight: bold; padding: 3px 3px 3px 3px; border-spacing: 2px; border-color: gray gray gray gray; border-style: dashed; }
+
+		tr.odd_row td { background-color: #FF9; }
+		tr.even_row  { }
+		
+		pdftoc { color: #666; }
+		pdftoc.pdftoclevel0 { font-weight: bold; margin-top: 0.5em; }
+		pdftoc.pdftoclevel1 { margin-left: 1em; }
+		pdftoc.pdftoclevel2 { margin-left: 2em; font-style: italic; } 
+		h2 { text-align: right; font-size:  20px; border-bottom 1px solid gray; font-style: italic;  }
+		h3 { text-align: left; font-size:  15px; font-style: italic;  }
+		body { font-size: 130%; }
+
+		.cover_page_heading { font-size: 50px; text-align: left; }
+		.cover_page_subheading { font-size: 30px; font-style: italic;  text-align: left; }
+
+		td.rag_status_red { background-color: red; padding: 5px; color: white; font-size: 20px;}
+		td.rag_status_amber { background-color: #F90; padding: 5px; color: white; font-size: 20px;}
+		td.rag_status_green { text-align: center; background-color: green; padding: 5px; color: white; font-size: 20px;} 
+		td.rag_status_blue { text-align: center; background-color: blue; padding: 5px; color: white; font-size: 20px; }
+		td.rag_status_grey { text-align: center; background-color: #E0E0E0; padding: 5px; font-size: 20px;}
+
+		td.documentation_status_red { background-color: red; padding: 5px; color: white; font-size: 20px;}
+		td.documentation_status_amber { background-color: #F90;padding: 5px; color: white; font-size: 20px;}
+		td.documentation_status_green { text-align: center; background-color: green; padding: 5px; color: white; font-size: 20px;}
+
+
+		.definition { padding: 5px; margin-left: 1.5em; margin-right: 1.5em; font-style: italic; border-style: dashed; background-color: #FFCC00; }
+		{% block additional_css %} {% endblock %}
+
+	</style>
+
+	</head>
+
+	<body>
+
+<table border="0">
+  <tbody>
+	<tr>
+	  <td align="right"> <img width="200px" src="{{ files }}/{{ project.company.logo }}"> </td>
+	</tr>
+  </tbody>
+</table>
+	{% block content %}
+	{% endblock %}
+
+	{% block html %}
+	{% endblock %}
+
+
+<div id="pageNumber" align="center">
+Page <pdf:pagenumber>
+</div>
+	<div align="right" id="footerBar">{% now "l jS F Y" %} </div>
+	</body>
+</html>

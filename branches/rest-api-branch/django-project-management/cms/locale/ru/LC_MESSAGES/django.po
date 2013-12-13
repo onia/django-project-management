@@ -1,0 +1,486 @@
+# translation of django.po to Русский
+# This file is distributed under the same license as the django-cms package.
+#
+# Pavel <bpa@spo.tyumen.ru>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: django\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-05-20 09:28+0600\n"
+"PO-Revision-Date: 2009-05-20 11:40+0100\n"
+"Last-Translator: Maik Lustenberger <maik.lustenberger@divio.ch>\n"
+"Language-Team: Русский <ru@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: admin.py:103
+msgid "The page was added successfully. Now you can create your content."
+msgstr "Страница была успешно создана. Сейчас Вы можете добавить на нее контент."
+
+#: admin.py:105
+msgid "The page was updated successfully. You may edit it again below."
+msgstr "Страница была обновлена. Ниже вы можете ее подредактировать."
+
+#: admin.py:124
+msgid "tinymce app not found in sys.path. Is tinymce app installed?"
+msgstr "приложение tinymce не было найдено в sys.path. Оно было установлено?"
+
+#: admin.py:126
+msgid "Can not find tinymce helper script or app is misonfigured. Is tinymce app installed?"
+msgstr "Невозможно найти помощь приложения tinymce. Оно было установлено?"
+
+#: admin.py:138
+#: templates/cms/page_add.html:41
+msgid "Add"
+msgstr "Добавить"
+
+#: admin.py:138
+msgid "Edit"
+msgstr "Редактировать"
+
+#: admin.py:138
+#: models.py:119
+msgid "page"
+msgstr "страница"
+
+#: admin.py:193
+msgid "The navigation was updated successfully. You may edit it again below."
+msgstr "Навигация была обновлена. Ниже вы можете ее подредактировать."
+
+#: admin.py:196
+msgid "Your changes were discarded, because there must not be more than one root element. Make sure that there is only one root element."
+msgstr "Ваши изменения были проигнорированы, т.к. корень сайта должен быть в единственном экземпляре."
+
+#: admin.py:203
+msgid "<li>Please <a href=\"../page/add/\">create a page</a> first.</li>"
+msgstr "<li>В первую очередь <a href=\"../page/add/\">создайте страницу</a>.</li>"
+
+#: admin.py:212
+msgid "Edit pages"
+msgstr "Редактировать страницы"
+
+#: admin.py:225
+msgid "Please fill in some page content."
+msgstr "Заполните страницы контентом."
+
+#: admin.py:233
+msgid "<h2>Your form is not valid.</h2>"
+msgstr "<h2>Форма некорректна.</h2>"
+
+#: admin.py:242
+msgid "This page content has been already removed. Please reload the page and try again."
+msgstr "Контент этой страницы был удален, обновите страницу и попробуйте снова."
+
+#: cms_global_settings.py:63
+msgid "Default"
+msgstr "По умолчанию"
+
+#: forms.py:57
+msgid "Hold down \"Control\", or \"Command\" on a Mac, to select more than one."
+msgstr "Удерживайте \"Control\", или \"Command\" на Mac, для множественного выбора."
+
+#: forms.py:63
+msgid "This value must contain only letters, numbers, underscores or hyphens."
+msgstr "Это значение должно содержать только буквы, цифры, символы подчеркивания или дефисы."
+
+#: forms.py:98
+msgid "The template that will be used to render the page. Choose nothing if you don't need a custom template."
+msgstr "Шаблон, который будет использован для отображения страницы. Ничего не выбирайте если вам не нужен специфичный шаблон."
+
+#: forms.py:99
+#: models.py:93
+msgid "start publishing"
+msgstr "начало публикации"
+
+#: forms.py:99
+msgid "Enter a date (and time) on which you want to start publishing this page."
+msgstr "Введите дату и время для начала показа страницы."
+
+#: forms.py:100
+#: models.py:94
+msgid "finish publishing"
+msgstr "окончание публикации"
+
+#: forms.py:100
+msgid "Enter a date after which you want to stop publishing this page."
+msgstr "Введите дату и время для окончания показа страницы."
+
+#: forms.py:122
+msgid "Please reorder the root object on the hierarchy page."
+msgstr "Пересортируйте корневой объект в иерархии страницы."
+
+#: forms.py:124
+msgid "Please choose in which category the page should belong."
+msgstr "Выберите категорию к которой должна принадлежать страница."
+
+#: forms.py:153
+msgid "language"
+msgstr "язык"
+
+#: forms.py:154
+msgid "position"
+msgstr "позиция"
+
+#: forms.py:155
+#: models.py:92
+msgid "is published"
+msgstr "опубликовано"
+
+#: forms.py:156
+msgid "Leave this empty to use the title of the page."
+msgstr "Оставьте это пустым для использования заголовка страницы."
+
+#: forms.py:156
+#: models.py:83
+msgid "title"
+msgstr "заголовок"
+
+#: forms.py:157
+#: models.py:274
+msgid "Only specify this if you want to give this page content a specific slug."
+msgstr "Определите только это если вы хотите дать странице специфическое кодовое имя"
+
+#: forms.py:157
+#: models.py:84
+#: models.py:274
+msgid "slug"
+msgstr "кодовое имя"
+
+#: forms.py:158
+#: models.py:275
+msgid "Used for page title. Should be no longer than 150 chars."
+msgstr "Заголовок страницы. Не более 150 символов."
+
+#: forms.py:158
+msgid "page title"
+msgstr "заголовок страницы"
+
+#: forms.py:159
+#: models.py:276
+msgid "Comma separated"
+msgstr "Разделено запятыми"
+
+#: forms.py:159
+#: models.py:276
+msgid "keywords"
+msgstr "ключевые слова"
+
+#: forms.py:160
+msgid "description"
+msgstr "описание"
+
+#: forms.py:161
+msgid "page topic"
+msgstr "тема страницы"
+
+#: forms.py:162
+msgid "content"
+msgstr "контент"
+
+#: forms.py:163
+msgid "content type"
+msgstr "тип содержания"
+
+#: forms.py:164
+msgid "allow template tags"
+msgstr "разрешить шаблонные теги"
+
+#: forms.py:165
+msgid "template (optional)"
+msgstr "шаблон (опционально)"
+
+#: forms.py:168
+msgid "New page content"
+msgstr "Новое содержание страницы"
+
+#: forms.py:175
+#: templates/cms/base.html:20
+msgid "search"
+msgstr "поиск"
+
+#: models.py:40
+msgid "Please create at least one page."
+msgstr "Создайте хотя бы одну страницу"
+
+#: models.py:83
+msgid "The title of the page."
+msgstr "Заголовок страницы"
+
+#: models.py:84
+msgid "The name of the page that appears in the URL. A slug can contain letters, numbers, underscores or hyphens."
+msgstr "Название страницы, которое появляется в URL. Кодовое имя может содержать буквы, цифры, символы подчеркивания и дефисы."
+
+#: models.py:90
+msgid "Optional. Dotted path to a python function that receives two arguments (request, context) and can update the context."
+msgstr "Опционально. Путь к функции питона, которая получает два аргумента (request, context) и может обновить контекст."
+
+#: models.py:92
+msgid "Whether or not the page is accessible from the web."
+msgstr "В любом случае или нет страница доступна в интернете."
+
+#: models.py:97
+msgid "Navigation"
+msgstr "Меню"
+
+#: models.py:97
+msgid "The page will be appended inside the chosen category."
+msgstr "Cтраницы будут добавлены внутри выбранной категории."
+
+#: models.py:99
+msgid "display in navigation"
+msgstr "показать в меню"
+
+#: models.py:100
+msgid "Table of contents"
+msgstr "Содержание"
+
+#: models.py:100
+msgid "If checked, will render a toc based on the anchor elements."
+msgstr "Основывать содержание на html якорях."
+
+#: models.py:103
+msgid "requires login"
+msgstr "требует логин"
+
+#: models.py:103
+msgid "If checked, only logged-in users can view the page."
+msgstr "Только зарегистрированные пользователи могут просматривать страницу."
+
+#: models.py:120
+msgid "pages"
+msgstr "страницы"
+
+#: models.py:254
+msgid "HTML"
+msgstr "HTML"
+
+#: models.py:255
+msgid "Markdown"
+msgstr "Понизить"
+
+#: models.py:256
+msgid "Textile"
+msgstr "Текстиль"
+
+#: models.py:257
+msgid "reStructuredText"
+msgstr "reStructuredText"
+
+#: models.py:258
+msgid "Plain text"
+msgstr "Обычный текст"
+
+#: models.py:269
+msgid "Only specify this if you want to override the page template."
+msgstr "Укажите, если хотите поменять шаблон."
+
+#: models.py:273
+msgid "Used in navigation. Leave this empty to use the default title."
+msgstr "Используется в меню. Оставьте пустым для использования стандартного заголовка."
+
+#: models.py:277
+#: models.py:278
+msgid "Keep between 150 and 1000 characters long."
+msgstr "Придерживайстесь в размере от 150 до 1000 символов."
+
+#: models.py:329
+msgid "published"
+msgstr "опубликовано"
+
+#: models.py:329
+msgid "unpublished"
+msgstr "не опубликовано"
+
+#: views.py:169
+msgid "Please create at least one subpage or enable DISPLAY_ROOT."
+msgstr "Создайте хотябы один подсайт или активируйте DISPLAY_ROOT."
+
+#: views.py:226
+msgid "Please define LANGUAGES in your project's settings."
+msgstr "Укажите языки для настроек вашего проекта."
+
+#: decorators/json.py:17
+msgid "Received invalid data."
+msgstr "Введены неправильные данные."
+
+#: templates/cms/base.html:16
+#: templates/cms/search.html:5
+msgid "Search"
+msgstr "Поиск"
+
+#: templates/cms/base.html:23
+msgid "main menu"
+msgstr "главное меню"
+
+#: templates/cms/base.html:31
+msgid "sub pages"
+msgstr "подстраницы"
+
+#: templates/cms/field.html:7
+msgid "Help"
+msgstr "Помощь"
+
+#: templates/cms/navigation.html:13
+#: templates/cms/page_add.html:38
+msgid "Home"
+msgstr "Главная"
+
+#: templates/cms/navigation.html:20
+msgid "Add page"
+msgstr "Добавить страницу"
+
+#: templates/cms/navigation.html:23
+#: templates/cms/page_add.html:60
+msgid "Note"
+msgstr "Заметка"
+
+#: templates/cms/navigation.html:23
+msgid "You will have to activate JavaScript in your browser's settings to be able to reorder the pages."
+msgstr "Вы должны активировать JavaScript в настройках браузера чтобы иметь возможность изменять порядок страниц."
+
+#: templates/cms/navigation.html:26
+msgid "Manage Pages"
+msgstr "Управление страницами"
+
+#: templates/cms/navigation.html:27
+msgid "Here you can edit the pages of your site. Drag and drop the pages to change their order or hierarchy. Note that changing the hierarchy will affect the URL of the pages. Click on a page to edit it. If you uncheck the \"in navigation\" field, the page will not be displayed in the automatically generated navigation. Note that deleting a page will delete its subpages, if you don't reorder them."
+msgstr "Здесь вы можете редактировать страницы сайта. Перетаскивайте страницы для смены их последовательности и иерархии. Имейте в виду, что изменение иерархии повлияет на адрес страницы. Нажмите на страницу, чтобы изменить её. Если вы снимите галочку \"в меню\", то страница не будет отображаться в автоматически генерируемой навигации. Имейте в виду, что удаление страниц будет удалять и ее подстраницы."
+
+#: templates/cms/navigation.html:43
+#: templates/cms/page_submit_row.html:4
+msgid "Add this page"
+msgstr "Добавить эту страницу"
+
+#: templates/cms/navigation.html:43
+#: templates/cms/page_submit_row.html:4
+msgid "Save all changes"
+msgstr "Сохранить все изменения"
+
+#: templates/cms/navigation_item.html:6
+msgid "In navigation"
+msgstr "в меню"
+
+#: templates/cms/navigation_item.html:8
+msgid "Is published"
+msgstr "опубликовано"
+
+#: templates/cms/navigation_item.html:9
+msgid "Edit page"
+msgstr "Редактировать страницу"
+
+#: templates/cms/navigation_item.html:10
+msgid "View"
+msgstr "Просмотр"
+
+#: templates/cms/navigation_item.html:11
+#: templates/cms/page_submit_row.html:3
+msgid "Delete"
+msgstr "Удалить"
+
+#: templates/cms/navigation_item.html:13
+msgid "Move"
+msgstr "Переместить"
+
+#: templates/cms/navigation_item.html:17
+msgid "ID"
+msgstr "ID"
+
+#: templates/cms/page_add.html:52
+msgid "Page Info"
+msgstr "Информация"
+
+#: templates/cms/page_add.html:60
+msgid "You will have to activate JavaScript in your browser's settings to be able to edit page content."
+msgstr "Вы должны активировать JavaScript в настройках браузера чтобы иметь возможность редактировать страницы."
+
+#: templates/cms/page_add.html:61
+msgid "Add page content"
+msgstr "Добавить контент страницы"
+
+#: templates/cms/page_add.html:67
+msgid "Publishing Info"
+msgstr "Информация о публикации"
+
+#: templates/cms/page_add.html:69
+msgid "This page is already in the navigation (<a href=\"../../navigation/\">edit navigation</a>):"
+msgstr "Эта страница уже в меню (<a href=\"../../navigation/\"> редактировать меню </ A>):"
+
+#: templates/cms/page_add.html:93
+#: templates/cms/page_add.html.py:95
+msgid "Add-ons"
+msgstr "Дополнения"
+
+#: templates/cms/pagecontent_form.html:5
+msgid "Properties"
+msgstr "Свойства"
+
+#: templates/cms/pagecontent_form.html:9
+msgid "Show advanced options"
+msgstr "Показать расширенные настройки"
+
+#: templates/cms/pagecontent_form.html:9
+msgid "Hide advanced options"
+msgstr "Скрыть расширенные настройки"
+
+#: templates/cms/pagecontent_form.html:12
+msgid "Advanced"
+msgstr "Продвинутый"
+
+#: templates/cms/pagecontent_form.html:18
+msgid "SEO"
+msgstr "SEO"
+
+#: templates/cms/pagecontent_form.html:31
+msgid "Actions"
+msgstr "Действия"
+
+#: templates/cms/pagecontent_form.html:32
+msgid "Preview this page"
+msgstr "Предпросмотр страницы"
+
+#: templates/cms/pagecontent_form.html:32
+msgid "Previews this page in a new window without saving it."
+msgstr "Предпросмотр страницы в новом окне без сохранения."
+
+#: templates/cms/pagecontent_form.html:33
+msgid "Preview"
+msgstr "Просмотр"
+
+#: templates/cms/pagecontent_form.html:34
+msgid "(in a new window without saving it)"
+msgstr "(в новом окне без сохранения)"
+
+#: templates/cms/pagecontent_form.html:37
+msgid "Delete this content"
+msgstr "Удалить этот контент"
+
+#: templates/cms/search.html:11
+msgid "Search results"
+msgstr "Поиск результатов"
+
+#: templates/cms/search.html:12
+msgid "for"
+msgstr "для"
+
+#: templates/cms/search.html:19
+msgid "Articles found in other languages"
+msgstr "Статьи на других языках"
+
+#: templates/cms/search.html:27
+msgid "Sorry, no articles were found."
+msgstr "Статья не была найдена ."
+
+#: templatetags/cms_base.py:196
+msgid "Unknown"
+msgstr "Неизвестно"
+
+#: templatetags/cms_base.py:198
+msgid "Yes"
+msgstr "Да"
+
+#: templatetags/cms_base.py:200
+msgid "No"
+msgstr "Нет"
+

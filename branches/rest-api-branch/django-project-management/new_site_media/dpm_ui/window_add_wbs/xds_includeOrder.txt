@@ -1,0 +1,4 @@
+<script type="text/javascript" src="WindowAddWBS.ui.js"></script>
+<script type="text/javascript" src="WindowAddWBS.js"></script>
+<script type="text/javascript" src="StoreProjectStage.js"></script>
+<script type="text/javascript" src="StoreSkillset.js"></script>

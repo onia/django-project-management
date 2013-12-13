@@ -1,0 +1,234 @@
+{
+	"name": "viewport.xds",
+	"projectId": "9CDAC8B1-6A11-4AE2-8F2C-9FE81612A8D7",
+	"settings": {
+		"urlPrefix": "http://localhost/",
+		"spacesToIndent": 4,
+		"codeGenFormat": "Class",
+		"extPath": "http://extjs.cachefly.net/ext-3.2.1/",
+		"exportPath": ".",
+		"lineEnding": "LF"
+	},
+	"xdsVersion": "xds-1.0.2.14",
+	"components": [
+		{
+			"id": "MyViewport",
+			"cid": "viewport",
+			"jsClass": "TheViewport",
+			"snapToGrid": 10,
+			"userConfig": {
+				"layout": "border",
+				"id": "viewport"
+			},
+			"cn": [
+				{
+					"id": "MyPanel",
+					"cid": "panel",
+					"jsClass": "MyPanel",
+					"snapToGrid": 10,
+					"userConfig": {
+						"title": "-ext-undefined-",
+						"region": "center",
+						"id": "center_panel"
+					}
+				},
+				{
+					"id": "MyPanel1",
+					"cid": "panel",
+					"jsClass": "MyPanel1",
+					"snapToGrid": 10,
+					"userConfig": {
+						"title": "Navigation",
+						"region": "west",
+						"width": 175,
+						"minWidth": 100,
+						"boxMaxWidth": 250,
+						"collapsible": true,
+						"padding": "12px"
+					},
+					"cn": [
+						{
+							"id": "MyTreePanel",
+							"cid": "treepanel",
+							"jsClass": "MyTreePanel",
+							"snapToGrid": 10,
+							"userConfig": {
+								"title": "-ext-undefined-",
+								"rootVisible": false,
+								"border": false
+							},
+							"cn": [
+								{
+									"id": "MyAsyncTreeNode",
+									"cid": "asynctreenode",
+									"jsClass": "MyAsyncTreeNode",
+									"dock": "root",
+									"snapToGrid": 10,
+									"userConfig": {
+										"text": "Root"
+									},
+									"cn": [
+										{
+											"id": "MyTreeNode",
+											"cid": "treenode",
+											"jsClass": "MyTreeNode",
+											"snapToGrid": 10,
+											"userConfig": {
+												"text": "Projects",
+												"leaf": "-ext-undefined-"
+											},
+											"cn": [
+												{
+													"id": "MyTreeNode5",
+													"cid": "treenode",
+													"jsClass": "MyTreeNode5",
+													"snapToGrid": 10,
+													"userConfig": {
+														"text": "View Dashboard",
+														"leaf": true
+													}
+												}
+											]
+										},
+										{
+											"id": "MyTreeNode1",
+											"cid": "treenode",
+											"jsClass": "MyTreeNode1",
+											"snapToGrid": 10,
+											"userConfig": {
+												"text": "Work In Progress"
+											},
+											"cn": [
+												{
+													"id": "MyTreeNode6",
+													"cid": "treenode",
+													"jsClass": "MyTreeNode6",
+													"snapToGrid": 10,
+													"userConfig": {
+														"text": "All WIP Reports",
+														"leaf": true
+													}
+												},
+												{
+													"id": "MyTreeNode7",
+													"cid": "treenode",
+													"jsClass": "MyTreeNode7",
+													"snapToGrid": 10,
+													"userConfig": {
+														"text": "Your WIP Items",
+														"leaf": true
+													}
+												}
+											]
+										},
+										{
+											"id": "MyTreeNode2",
+											"cid": "treenode",
+											"jsClass": "MyTreeNode2",
+											"snapToGrid": 10,
+											"userConfig": {
+												"text": "Rota"
+											},
+											"cn": [
+												{
+													"id": "MyTreeNode10",
+													"cid": "treenode",
+													"jsClass": "MyTreeNode10",
+													"snapToGrid": 10,
+													"userConfig": {
+														"text": "All Rotas",
+														"leaf": true
+													}
+												},
+												{
+													"id": "MyTreeNode8",
+													"cid": "treenode",
+													"jsClass": "MyTreeNode8",
+													"snapToGrid": 10,
+													"userConfig": {
+														"text": "Your Rota",
+														"leaf": true
+													}
+												},
+												{
+													"id": "MyTreeNode9",
+													"cid": "treenode",
+													"jsClass": "MyTreeNode9",
+													"snapToGrid": 10,
+													"userConfig": {
+														"text": "Your Teams Rota",
+														"leaf": true
+													}
+												}
+											]
+										},
+										{
+											"id": "MyTreeNode3",
+											"cid": "treenode",
+											"jsClass": "MyTreeNode3",
+											"snapToGrid": 10,
+											"userConfig": {
+												"text": "Documentation"
+											},
+											"cn": [
+												{
+													"id": "MyTreeNode11",
+													"cid": "treenode",
+													"jsClass": "MyTreeNode11",
+													"snapToGrid": 10,
+													"userConfig": {
+														"text": "Help Files",
+														"leaf": true
+													}
+												},
+												{
+													"id": "MyTreeNode12",
+													"cid": "treenode",
+													"jsClass": "MyTreeNode12",
+													"snapToGrid": 10,
+													"userConfig": {
+														"text": "Bugs/Code",
+														"leaf": true
+													}
+												}
+											]
+										},
+										{
+											"id": "MyTreeNode4",
+											"cid": "treenode",
+											"jsClass": "MyTreeNode4",
+											"snapToGrid": 10,
+											"userConfig": {
+												"text": "Your Account"
+											},
+											"cn": [
+												{
+													"id": "MyTreeNode13",
+													"cid": "treenode",
+													"jsClass": "MyTreeNode13",
+													"snapToGrid": 10,
+													"userConfig": {
+														"text": "Logout",
+														"leaf": true
+													}
+												}
+											]
+										}
+									]
+								},
+								{
+									"id": "MyTreeLoader",
+									"cid": "treeloader",
+									"jsClass": "MyTreeLoader",
+									"dock": "loader",
+									"snapToGrid": 10
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"stores": []
+}

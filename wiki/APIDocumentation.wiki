@@ -1,0 +1,30 @@
+#summary Draft documentation of how the REST API will work
+
+|| *Description* || *URI* || *GET* || *POST* || *PUT* || *DELETE* || *Complete* ||
+|| List of Projects || /api/projects/ || List of all projects || - || Create a new Project ||- || Yes ||
+|| One Project || /api/projects/<< project_number >>/ || Project details || Updates project || - || - || Yes ||
+|| List of Deliverables || /api/deliverables/<< project_number >>/ || List of Deliverables || - || - || - || No ||
+|| One Deliverable || /api/deliverables/<< project_number >>/<< deliverable_id >>/ || Deliverable detail || Update the deliverable || - || Delete the deliverable* || No ||
+|| List of Risks || /api/risks/<< project_number >>/ || List of Risks || - || - || - || No ||
+|| One Risk || /api/risks/<< project_number >>/<< risk_id >>/ || Risk detail || Update the Risk || - || Delete the Risk* || No ||
+|| List of Work Items || /api/wbs/<< project_number >>/ || List of Work Items || - || - || - || No ||
+|| One Work Item || /api/wbs/<< project_number >>/<< wbs_id >>/ || Work Item detail || Update the Work Item || - || Delete the Work Item* || No ||
+|| List of Issues || /api/issues/<< project_number >>/ || List of Issues || - || - || - || No ||
+|| One Issue || /api/issues/<< project_number >>/<< issue_id >>/ || Issue detail || Update the Issue || - || Delete the Issue* || No ||
+|| List of Lessons || /api/lessons/<< project_number >>/ || List of Lessons || - || - || - || No ||
+|| One Lesson || /api/lessons/<< project_number >>/<< lesson_id >>/ || Lesson detail || Update the Lesson || - || Delete the Lesson* || No ||
+|| List of Reports || /api/reports/<< project_number >>/ || List of Reports || - || - || - || No ||
+|| One Report || /api/report/<< project_number >>/<< report_id >>/ || Report detail || Update the Report || - || Delete the Report* || No ||
+|| List of Files || /api/files/<< project_number >>/ || List of Files || - || - || - || No ||
+|| One File || /api/files/<< project_number >>/<< file_id >>/ || File detail || Update the File || -  || Delete the File* || No ||
+|| Users || /api/projects/<< project_number >>/users/ || List of Users || - || - || - || No ||
+|| Managers || /api/projects/<< project_number >>/managers/ || List of Managers || - || - || - || No ||
+|| Non-managers || /api/projects/<< project_number >>/non-managers/ || List of non-Managers || - || - || - || No ||
+|| Skillsets || /api/skillsets/ || List of skillsets || Add to list of skillsets || - || - || No ||
+|| Stage Plan || /api/projects/<< project_number >>/stage_plan/ || List of Stages || Add to Stages || - || - || No ||
+|| One Stage || /api/projects/<< project_number >>/stage_plan/<< stage_id >>/ || Stage detail || Update the stage || - || Delete the stage || No ||
+
+
+
+
+* Objects aren't really deleted but disassociated from the project

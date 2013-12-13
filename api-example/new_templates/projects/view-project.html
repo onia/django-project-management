@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ project.project_number }}
+{% endblock %}
+
+{% block extra_javascript %}
+<link rel="stylesheet" type="text/css" href="/site_media/js/ext-3.2.0/examples/ux/css/MultiSelect.css" />
+<link rel="stylesheet" type="text/css" href="/site_media/js/ext-3.2.0/examples/shared/examples.css" />
+<link rel="stylesheet" type="text/css" href="/site_media/js/ext-3.2.0/examples/ux/fileuploadfield/css/fileuploadfield.css"/>
+<link rel="stylesheet" type="text/css" href="/site_media/js/ext-3.2.0/examples/ux/treegrid/treegrid.css" rel="stylesheet" />
+<script type="text/javascript" src="/site_media/js/ext-3.2.0/examples/ux/MultiSelect.js"></script>
+<script type="text/javascript" src="/site_media/js/ext-3.2.0/examples/ux/ItemSelector.js"></script> 
+<script type="text/javascript" src="/site_media/js/ext-3.2.0/src/widgets/tips/SliderTip.js"></script>
+<script type="text/javascript" src="/site_media/js/ext-3.2.0/examples/ux/fileuploadfield/FileUploadField.js"></script>
+<script src="http://static.simile.mit.edu/timeline/api-2.3.0/timeline-api.js?bundle=true" type="text/javascript"></script>
+
+<script type="text/javascript">
+	var project_url = "{{ project.get_absolute_url }}"
+	var project_number = "{{ project.project_number }}"
+	var user_id = "{{ user.id }}"
+</script>
+<script type="text/javascript" src="/site_media/js/view-project.js"></script>
+
+{% endblock %}
+
+{% block body_tag %} onload="onLoad();" onresize="onResize();" {% endblock %}
+
+{% block main_content %}
+<div id="project_initiation" class="x-hide-display">
+
+				<table class="project_table">
+					<tr> <th>Project Number</th><td>{{ project.project_number }}</td> </tr>
+					<tr> <th>Status</th><td>{{ project.get_project_status_display }}</td> </tr>
+					<tr> <th>Company</th><td>{{ project.company.company_name }}</td> </tr>
+
+					<tr> <th>Project Manager</th><td>{% if project.project_manager.get_full_name %}{{ project.project_manager.get_full_name }}
+														{% else %}{{ project.project_manager.username }}{% endif %}</td> </tr>
+					<tr> <th>Team Managers</th><td><ul>{% for u in project.team_managers.all %}
+													<li>{% if u.get_full_name %}{{ u.get_full_name }}{% else %}{{ u.username }}{% endif %}</li>
+	
+														{% endfor %}</ul></td> </tr>
+					<tr> <th>Project Sponsor</th><td>{{ project.project_sponsor }} </td> </tr>
+					<tr> <th>Duration Type</th><td>{{ project.get_duration_type_display }} </td> </tr>
+					<tr> <th>Project Description</th><td>{{ project.project_description|linebreaks }}</td> </tr>
+					<tr> <th>Business Case</th><td>{{ project.business_case|linebreaks }}</td> </tr>
+					<tr> <th>Business Benefits</th><td>{{ project.business_benefits|linebreaks }}</td> </tr>
+					<tr> <th>Project Scope</th><td>{{ project.project_scope|linebreaks }}</td> </tr>
+					<tr> <th>Exclusions</th><td>{{ project.exclusions|linebreaks }}</td> </tr>
+					<tr> <th>Assumptions</th><td>{{ project.assumptions|linebreaks }}</td> </tr>
+					<tr> <th>Stage Plan</th><td>{% if project.stage_plan.all %}
+												{% for stage in project.stage_plan.all %}
+												<b>{{ stage.stage }}</b>
+												<br>
+												{{ stage.description|linebreaks }}
+												<br>
+
+												{% endfor %}
+												{% else %}
+													No Stage plan defined 
+												{% endif %}</td></tr>
+				
+					<tr> <th>Communications Plan</th><td>{{ project.communications_plan|linebreaks }}</td> </tr>
+					<tr> <th>Quality Plan</th><td>{{ project.quality_plan|linebreaks }}</td> </tr>
+				</table>
+				</p>
+
+</div>
+
+
+
+<div id="project_files" class="x-hide-display">
+
+				<table>
+					<tr> <td>Description</td><td>Date</td><td>Uploaded By</td><td><!-- Download link --></td> </tr>
+					<tr> <td><a href="/Files/{{ project.project_number }}/PID">Project Initiation Document</a></td><td>-</td><td>-</td><td><a href="/Files/{{ project.project_number }}/PID">Download</a></td></tr>
+					<tr> <td><a href="/Files/{{ project.project_number }}/RiskRegister">Risk Register</a></td><td>-</td><td>-</td><td><a href="/Files/{{ project.project_number }}/RiskRegister">Download</a></td></tr>
+					<tr> <td><a href="/Files/{{ project.project_number }}/GanttChart">Gantt Chart</a></td><td>-</td><td>-</td><td><a href="/Files/{{ project.project_number }}/GanttChart">Download</a></td></tr>
+				</table>
+
+
+</div>
+
+<div id="project_timeline_wrapper" class="x-hide-display">
+	<div id="project_timeline" style="height: 300px; border: 1px solid #aaa"></div>
+</div>
+
+{% endblock %}

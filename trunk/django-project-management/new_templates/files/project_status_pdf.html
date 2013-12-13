@@ -1,0 +1,41 @@
+{% extends "pdf-base.html" %}
+{% load project_tags %}
+
+{% block additional_css %}
+body { font-size: 100%; }
+{% endblock %}
+
+{% block content %}
+<br>
+<br>
+<table class="pdf-table" repeat="1" width="100%">
+<tr class="first_row" style="font-size: 20px;">
+	<th>Company</th>
+	<th>Project Name</th>
+	<th>Project Number</th>
+	<th>Project Status</th>
+<!--	<th>Predicted Completion Date</th>-->
+	<th>Executive Summary</th>
+	<th>% Complete</th>	
+	<th>RAG Status</th>
+	<th>Complete Project Documentation</th>
+</tr>
+
+{% for project in projects %}
+
+<tr>
+	<td style='text-align: center; font-size: 20px;'>{{ project.company }}</td>
+	<td style='text-align: center; font-size: 20px;'>{{ project.project_name }}</td>
+	<td style='text-align: center; font-size: 20px;'>{{ project.project_number }}</td>
+	<td style='text-align: center; font-size: 20px;'>{{ project.get_project_status_display }}</td>
+	<!--<td>{% get_predicted_completion_date project %}</td>-->
+	<td style='font-size: 15px;'>{% get_latest_project_exec_summary project %}</td>
+	<td style='text-align: center; font-size: 20px;'>{% get_project_percent_complete project %} %</td>
+	<td class="{% get_project_rag_status_css_class project %}"> {% get_project_rag_status project %}</td>
+	<td class="{% get_project_documentation_status_css_class project %}">{% get_project_documentation_status project %}</td>
+</tr>
+
+
+{% endfor %}
+</table>
+{% endblock %}

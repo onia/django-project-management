@@ -1,0 +1,235 @@
+{
+	"name": "window_add_risk.xds",
+	"projectId": "BA1F4208-AD01-48F7-A029-3BA56BC4BB71",
+	"settings": {
+		"urlPrefix": "http://localhost/",
+		"spacesToIndent": 4,
+		"codeGenFormat": "Class",
+		"extPath": "http://extjs.cachefly.net/ext-3.2.1/",
+		"exportPath": ".",
+		"lineEnding": "LF"
+	},
+	"xdsVersion": "xds-1.0.2.14",
+	"components": [
+		{
+			"id": "MyWindow",
+			"cid": "window",
+			"jsClass": "WindowAddRisk",
+			"snapToGrid": 10,
+			"userConfig": {
+				"title": "Add / Edit Risk",
+				"width": 560,
+				"height": 437,
+				"padding": "-ext-undefined-",
+				"id": "window_add_risk",
+				"modal": true
+			},
+			"cn": [
+				{
+					"id": "MyForm",
+					"cid": "form",
+					"jsClass": "MyForm",
+					"snapToGrid": 10,
+					"userConfig": {
+						"title": "-ext-undefined-",
+						"padding": "15px",
+						"id": "form_add_risk",
+						"url": "-ext-undefined-"
+					},
+					"cn": [
+						{
+							"id": "MyTextField",
+							"cid": "textarea",
+							"jsClass": "MyTextField",
+							"snapToGrid": 10,
+							"userConfig": {
+								"fieldLabel": "Description",
+								"anchor": "100%",
+								"name": "description"
+							}
+						},
+						{
+							"id": "MyCombo",
+							"cid": "combobox",
+							"jsClass": "MyCombo",
+							"snapToGrid": 10,
+							"userConfig": {
+								"fieldLabel": "Owner",
+								"anchor": "100%",
+								"name": "owner",
+								"triggerAction": "all",
+								"mode": "local",
+								"displayField": "data",
+								"valueField": "id",
+								"store": "st_resources",
+								"hiddenName": "owner"
+							}
+						},
+						{
+							"id": "MySliderField",
+							"cid": "sliderfield",
+							"jsClass": "MySliderField",
+							"snapToGrid": 10,
+							"userConfig": {
+								"value": 48,
+								"fieldLabel": "Probability",
+								"anchor": "100%",
+								"name": "probability",
+								"minValue": 1,
+								"maxValue": 4,
+								"id": "probability"
+							}
+						},
+						{
+							"id": "MySliderField1",
+							"cid": "sliderfield",
+							"jsClass": "MySliderField",
+							"snapToGrid": 10,
+							"userConfig": {
+								"value": 40,
+								"fieldLabel": "Impact",
+								"anchor": "100%",
+								"name": "impact",
+								"minValue": 1,
+								"maxValue": 4,
+								"id": "impact"
+							}
+						},
+						{
+							"id": "MyTextField1",
+							"cid": "textfield",
+							"jsClass": "MyTextField1",
+							"snapToGrid": 10,
+							"userConfig": {
+								"fieldLabel": "Rating",
+								"anchor": "100%",
+								"name": "rating",
+								"readOnly": true,
+								"id": "rating"
+							}
+						},
+						{
+							"id": "MyCombo1",
+							"cid": "combobox",
+							"jsClass": "MyCombo1",
+							"snapToGrid": 10,
+							"userConfig": {
+								"fieldLabel": "Counter Measure",
+								"anchor": "100%",
+								"name": "counter_measure",
+								"store": "st_counter",
+								"mode": "local",
+								"triggerAction": "all",
+								"valueField": "id",
+								"displayField": "data",
+								"hiddenName": "counter_measure"
+							}
+						},
+						{
+							"id": "MyCombo2",
+							"cid": "combobox",
+							"jsClass": "MyCombo2",
+							"snapToGrid": 10,
+							"userConfig": {
+								"fieldLabel": "Status",
+								"anchor": "100%",
+								"name": "status",
+								"store": "st_risk_status",
+								"triggerAction": "all",
+								"mode": "local",
+								"valueField": "id",
+								"displayField": "data",
+								"hiddenName": "status"
+							}
+						},
+						{
+							"id": "MyTextArea",
+							"cid": "textarea",
+							"jsClass": "MyTextArea",
+							"snapToGrid": 10,
+							"userConfig": {
+								"anchor": "100%",
+								"fieldLabel": "Update",
+								"name": "update"
+							}
+						},
+						{
+							"id": "MyTextArea1",
+							"cid": "textarea",
+							"jsClass": "MyTextArea1",
+							"snapToGrid": 10,
+							"userConfig": {
+								"anchor": "100%",
+								"fieldLabel": "History",
+								"name": "history",
+								"readOnly": true
+							}
+						}
+					]
+				}
+			]
+		}
+	],
+	"stores": [
+		{
+			"id": "MyStore",
+			"cid": "arraystore",
+			"jsClass": "StoreRiskCounterMeasure",
+			"snapToGrid": 10,
+			"userConfig": {
+				"storeId": "st_counter",
+				"data": "[[1,\"Prevention\"],[2,\"Acceptance\"],[3,\"Transfer\"],[4,\"Reduction\"],[5,\"Contingency\"]]"
+			},
+			"cn": [
+				{
+					"id": "MyField",
+					"cid": "datafield",
+					"jsClass": "MyField",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "id"
+					}
+				},
+				{
+					"id": "MyField1",
+					"cid": "datafield",
+					"jsClass": "MyField1",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "data"
+					}
+				}
+			]
+		},
+		{
+			"id": "MyStore1",
+			"cid": "arraystore",
+			"jsClass": "StoreRiskStatus",
+			"snapToGrid": 10,
+			"userConfig": {
+				"storeId": "st_risk_status",
+				"data": "[[1,\"Closed\"],[2,\"Reducing\"],[3,\"Increasing\"],[4,\"No Change\"]]"
+			},
+			"cn": [
+				{
+					"id": "MyField2",
+					"cid": "datafield",
+					"jsClass": "MyField2",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "id"
+					}
+				},
+				{
+					"id": "MyField3",
+					"cid": "datafield",
+					"jsClass": "MyField3",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "data"
+					}
+				}
+			]
+		}
+	]
+}

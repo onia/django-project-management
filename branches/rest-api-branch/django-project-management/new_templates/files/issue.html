@@ -1,0 +1,27 @@
+{% extends "pdf-base.html" %}
+{% load wbs_tags %}
+{% load project_tags %}
+
+
+
+{% block content %}
+
+<h1>Issue Log: {{ project.project_name }}</h1>
+				<table class="pdf-table" repeat="1">
+					<tr class="first_row"> <th width="25%">Description</th><th>Owner</th><th>History</th><th width="50">Type</th><th width="50">Status</th><th width="50">Priority</th><th width="100">Date Logged</th></tr>
+					{% for w in project.issues.all %}
+
+						<tr> 
+							<td>{{ w.description|linebreaks }}</td>
+							<td>{% if w.owner.get_full_name %} {{ w.owner.get_full_name }} {% else %} {{ w.owner.username }} {% endif %}</td>
+							<td>{{ w.history|linebreaks }}</td>
+							<td>{{ w.get_type_display }}</td>
+							<td>{{ w.get_status_display }}</td>
+							<td>{{ w.get_priority_display }}</td>
+							<td>{{ w.created_date|date:"jS M y" }}</td>
+						</tr>
+
+
+					{% endfor %}
+				</table>
+{% endblock %}

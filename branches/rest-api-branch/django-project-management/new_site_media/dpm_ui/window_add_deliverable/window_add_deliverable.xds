@@ -1,0 +1,123 @@
+{
+	"name": "window_add_deliverable",
+	"projectId": "BA1F4208-AD01-48F7-A029-3BA56BC4BB71",
+	"settings": {
+		"urlPrefix": "http://localhost/",
+		"spacesToIndent": 4,
+		"codeGenFormat": "Class",
+		"extPath": "http://extjs.cachefly.net/ext-3.2.1/",
+		"exportPath": ".",
+		"lineEnding": "LF"
+	},
+	"xdsVersion": "xds-1.0.2.14",
+	"components": [
+		{
+			"id": "MyWindow",
+			"cid": "window",
+			"jsClass": "WindowAddDeliverable",
+			"snapToGrid": 10,
+			"userConfig": {
+				"title": "Add / Edit Deliverable",
+				"width": 560,
+				"height": 437,
+				"padding": "-ext-undefined-",
+				"id": "window_add_deliverable",
+				"modal": true
+			},
+			"cn": [
+				{
+					"id": "MyForm",
+					"cid": "form",
+					"jsClass": "MyForm",
+					"snapToGrid": 10,
+					"userConfig": {
+						"title": "-ext-undefined-",
+						"padding": "15px",
+						"id": "form_add_deliverable",
+						"url": "-ext-undefined-"
+					},
+					"cn": [
+						{
+							"id": "MyTextField",
+							"cid": "textarea",
+							"jsClass": "MyTextField",
+							"snapToGrid": 10,
+							"userConfig": {
+								"fieldLabel": "Description",
+								"anchor": "100%",
+								"name": "description"
+							}
+						},
+						{
+							"id": "MyTextField1",
+							"cid": "textarea",
+							"jsClass": "MyTextField1",
+							"snapToGrid": 10,
+							"userConfig": {
+								"fieldLabel": "Acceptance Criteria",
+								"anchor": "100%",
+								"name": "acceptance_criteria"
+							}
+						},
+						{
+							"id": "MyTextField2",
+							"cid": "textfield",
+							"jsClass": "MyTextField2",
+							"snapToGrid": 10,
+							"userConfig": {
+								"fieldLabel": "Deliverable Tester",
+								"anchor": "100%",
+								"name": "deliverable_tester"
+							}
+						},
+						{
+							"id": "MyTextArea",
+							"cid": "textarea",
+							"jsClass": "MyTextArea",
+							"snapToGrid": 10,
+							"userConfig": {
+								"anchor": "100%",
+								"fieldLabel": "Method",
+								"name": "testing_method"
+							}
+						},
+						{
+							"id": "MyTextArea1",
+							"cid": "textarea",
+							"jsClass": "MyTextArea1",
+							"snapToGrid": 10,
+							"userConfig": {
+								"anchor": "100%",
+								"fieldLabel": "Expected Result",
+								"name": "expected_result"
+							}
+						},
+						{
+							"id": "MyTextField3",
+							"cid": "textfield",
+							"jsClass": "MyTextField3",
+							"snapToGrid": 10,
+							"userConfig": {
+								"fieldLabel": "RTO",
+								"anchor": "100%",
+								"name": "rpo"
+							}
+						},
+						{
+							"id": "MyTextField4",
+							"cid": "textfield",
+							"jsClass": "MyTextField4",
+							"snapToGrid": 10,
+							"userConfig": {
+								"fieldLabel": "RTO",
+								"anchor": "100%",
+								"name": "rto"
+							}
+						}
+					]
+				}
+			]
+		}
+	],
+	"stores": []
+}

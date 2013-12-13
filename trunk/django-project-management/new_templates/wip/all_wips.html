@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block extra_javascript %}
+
+
+
+{% endblock %}
+
+
+{% block main_content %}
+
+<div id="center_panel_html">
+
+
+				<table class="project_table">
+					<tr> <th>WIP Report</th></tr>
+					{% for wip in wip_reports %}
+					<tr> <td><a href="{{ wip.get_absolute_url }}">{{ wip }}</a></td> </tr>
+					{% endfor %}
+				</table>
+
+
+</div>
+{% endblock %}

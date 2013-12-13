@@ -1,0 +1,188 @@
+{% extends "pdf-base.html" %}
+
+{% block content %}
+<br>
+<br>
+<br>
+<p class="cover_page_heading">Project Initiation Document</p>
+<p class="cover_page_subheading">{{ project.project_name }}</p>
+
+<div><pdf:nextpage /></div>
+
+<h2>Table of Contents</h2>
+<div><pdf:toc /></div>
+
+<div><pdf:nextpage /></div>
+
+<h2>{{ project.project_number }}</h2>
+<br>
+<table class="pdf-table" border="1" cellpadding="2" cellspacing="2">
+    <tr>
+      <th>Project Number</th>
+      <td>{{ project.project_number }}</td>
+      <th>Client</th>
+      <td>{{ project.company.company_name }} </td>
+    </tr>
+    <tr>
+      <th>Project Manager</th>
+      <td>{% if project.project_manager.get_full_name %} {{ project.project_manager.get_full_name }}
+										{% else %} {{ project.project_manager.username }} {% endif %} </td>
+      <th>Date</th>
+      <td>{% now "l jS F Y" %}</td>
+    </tr>
+	<tr>
+      <th>Project Sponsor</th>
+      <td>{{ project.project_sponsor }} </td>
+      <th>Status</th>
+      <td>{{ project.get_project_status_display }}</td>
+    </tr>
+</table>
+<br>
+<br>
+<h2>Project Description</h2>
+{{ project.project_description|linebreaks }}
+<br>
+<h2>Business Case</h2>
+{{ project.business_case|linebreaks }}
+<br>
+<h3>Business Benefits</h3>
+{{ project.business_benefits|linebreaks }}
+
+<br>
+<h2>Scope</h2>
+<h3>Project Scope</h3>
+{{ project.project_scope|linebreaks }}
+<br>
+
+				
+
+<h3>Deliverables</h3>
+{% for d in project.deliverables.all %}
+<br>
+<table class="pdf-table" border="1" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <th width="33%">Description</th>
+      <td>{{ d.description|linebreaks }}</td>
+	</tr>
+	<tr>
+      <th>Acceptance Criteria</th>
+      <td>{{ d.acceptance_criteria|linebreaks }} </td>
+    </tr>
+    <tr>
+      <th>Tester</th>
+      <td>{{ d.deliverable_tester }}</td>
+	</tr>
+	<tr>
+      <th>Method</th>
+      <td>{{ d.testing_method|linebreaks }}</td>
+    </tr>
+	<tr>
+      <th>Expected Result</th>
+      <td>{{ d.expected_result|linebreaks }}</td>
+    </tr>
+  </tbody>
+</table>
+{% endfor %}
+<br>
+<h3>Excludes</h3>
+{{ project.exclusions|linebreaks }}
+<br>
+<h3>Assumptions</h3>
+{{ project.assumptions|linebreaks }}
+<br>
+<h3>Stage Plan</h3>
+
+{% comment %}
+<div class="definition">
+Stages are partitions of the project with decision points.A stage is a
+collection of activities and
+products whose delivery is managed as a unit. As such it is a subset of the
+project and in
+PRINCE2 terms it is the element of work that the Project Manager is
+managing on behalf of
+the Project Board at any one time.</div>
+{% endcomment %}
+
+{% if project.stage_plan.all %}
+	{% for stage in project.stage_plan.all %}
+		<h4>{{ stage.stage }}</h4>
+		<br>
+		<blockquote>{{ stage.description|linebreaks }}</blockquote>
+		<br>
+	{% endfor %}
+{% else %}
+	No Stage plan defined 
+{% endif %}
+<h2>Communications Plan</h2>
+{{ project.communications_plan|linebreaks }}
+<br>
+<h2>Quality Plan</h2>
+{{ project.quality_plan|linebreaks }}
+<br>
+<h2>Risk Overview</h2>
+
+<h3>More details on the risks below are available in the Risk Register document</h3><br>
+</p>
+<table class="pdf-table" border="1" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <th>Risk Number<br> </th>
+      <th>Description </th>
+      <th>Owner</th>
+      <th>Rating</th>
+    </tr>
+	{% for r in project.risks.all %}
+    <tr>
+      <td>{{ r.risk_number }}</td>
+      <td>{{ r.description|linebreaks}}<br> </td>
+      <td>{{ r.owner.get_full_name }} </td>
+      <td>{{ r.rating }}<br>
+      </td>
+    </tr>
+	{% endfor %}
+  </tbody>
+</table>
+
+
+<h2>Document Approval</h2>
+<br>
+This document has been reviewed and approved by:<br>
+<br>
+<table class="pdf-table" border="1" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <th>Name</th>
+      <th>Signature</th>
+      <th>Date</th>
+      <th>Version</th>
+    </tr>
+    <tr>
+      <td>{% if project.project_manager.get_full_name %} {{ project.project_manager.get_full_name }}
+										{% else %} {{ project.project_manager.username }} {% endif %}<br> (Project Manager) </td>
+      </td>
+      <td><br>
+      </td>
+      <td>{{ now }}<br>
+      </td>
+      <td>{% now "Ymd" %}<br>
+      </td>
+    </tr>
+
+    <tr>
+      <td>{{ project.project_sponsor }}<br> (Project Sponsor)</td>
+      <td><br>
+      </td>
+      <td>{{ now }}<br>
+      </td>
+      <td>{% now "Ymd" %}<br>
+      </td>
+    </tr>
+
+
+
+  </tbody>
+</table>
+
+
+{% endblock %}

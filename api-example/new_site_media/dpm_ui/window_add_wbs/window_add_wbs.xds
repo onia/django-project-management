@@ -1,0 +1,289 @@
+{
+	"name": "window_add_wbs.xds",
+	"projectId": "BA1F4208-AD01-48F7-A029-3BA56BC4BB71",
+	"settings": {
+		"urlPrefix": "http://localhost/",
+		"spacesToIndent": 4,
+		"codeGenFormat": "Class",
+		"extPath": "http://extjs.cachefly.net/ext-3.2.1/",
+		"exportPath": ".",
+		"lineEnding": "LF"
+	},
+	"xdsVersion": "xds-1.0.2.14",
+	"components": [
+		{
+			"id": "MyWindow",
+			"cid": "window",
+			"jsClass": "WindowAddWBS",
+			"snapToGrid": 10,
+			"userConfig": {
+				"title": "Add / Edit Work Item",
+				"width": 568,
+				"height": 561,
+				"padding": "-ext-undefined-",
+				"id": "window_add_wbs",
+				"modal": true
+			},
+			"cn": [
+				{
+					"id": "MyForm",
+					"cid": "form",
+					"jsClass": "MyForm",
+					"snapToGrid": 10,
+					"userConfig": {
+						"title": "-ext-undefined-",
+						"padding": "15px",
+						"id": "form_add_wbs",
+						"url": "-ext-undefined-"
+					},
+					"cn": [
+						{
+							"id": "MyCombo",
+							"cid": "combobox",
+							"jsClass": "MyCombo",
+							"snapToGrid": 10,
+							"userConfig": {
+								"fieldLabel": "Skillset",
+								"anchor": "100%",
+								"name": "skillset",
+								"triggerAction": "all",
+								"mode": "local",
+								"store": "st_skillset"
+							}
+						},
+						{
+							"id": "MyTextField5",
+							"cid": "textfield",
+							"jsClass": "MyTextField5",
+							"snapToGrid": 10,
+							"userConfig": {
+								"fieldLabel": "Title",
+								"anchor": "100%",
+								"name": "title"
+							}
+						},
+						{
+							"id": "MyCombo1",
+							"cid": "combobox",
+							"jsClass": "MyCombo",
+							"snapToGrid": 10,
+							"userConfig": {
+								"fieldLabel": "Project Stage",
+								"anchor": "100%",
+								"name": "project_stage",
+								"triggerAction": "all",
+								"mode": "local",
+								"store": "st_stage_plan"
+							}
+						},
+						{
+							"id": "MyCombo2",
+							"cid": "combobox",
+							"jsClass": "MyCombo",
+							"snapToGrid": 10,
+							"userConfig": {
+								"fieldLabel": "Depends Upon",
+								"anchor": "100%",
+								"name": "depends",
+								"triggerAction": "all",
+								"mode": "local",
+								"store": "st_wbs"
+							}
+						},
+						{
+							"id": "MyTextField2",
+							"cid": "textfield",
+							"jsClass": "MyTextField2",
+							"snapToGrid": 10,
+							"userConfig": {
+								"fieldLabel": "Duration",
+								"anchor": "100%",
+								"name": "duration"
+							}
+						},
+						{
+							"id": "MyTextArea",
+							"cid": "textarea",
+							"jsClass": "MyTextArea",
+							"snapToGrid": 10,
+							"userConfig": {
+								"anchor": "100%",
+								"fieldLabel": "Description",
+								"name": "description"
+							}
+						},
+						{
+							"id": "MyCombo3",
+							"cid": "combobox",
+							"jsClass": "MyCombo",
+							"snapToGrid": 10,
+							"userConfig": {
+								"fieldLabel": "Owner",
+								"anchor": "100%",
+								"name": "owner",
+								"triggerAction": "all",
+								"mode": "local",
+								"store": "st_resources"
+							}
+						},
+						{
+							"id": "MySliderField",
+							"cid": "sliderfield",
+							"jsClass": "MySliderField",
+							"snapToGrid": 10,
+							"userConfig": {
+								"value": 40,
+								"fieldLabel": "Percent Complete",
+								"anchor": "100%",
+								"name": "percent_complete"
+							}
+						},
+						{
+							"id": "MyDateField",
+							"cid": "datefield",
+							"jsClass": "MyDateField",
+							"snapToGrid": 10,
+							"userConfig": {
+								"fieldLabel": "Start Date",
+								"anchor": "100%",
+								"name": "start_date"
+							}
+						},
+						{
+							"id": "MyDateField1",
+							"cid": "datefield",
+							"jsClass": "MyDateField",
+							"snapToGrid": 10,
+							"userConfig": {
+								"fieldLabel": "Finish Date",
+								"anchor": "100%",
+								"name": "finish_date"
+							}
+						},
+						{
+							"id": "MyTextField6",
+							"cid": "textfield",
+							"jsClass": "MyTextField6",
+							"snapToGrid": 10,
+							"userConfig": {
+								"fieldLabel": "Cost",
+								"anchor": "100%",
+								"itemId": "cost"
+							}
+						},
+						{
+							"id": "MyTextField",
+							"cid": "textarea",
+							"jsClass": "MyTextField",
+							"snapToGrid": 10,
+							"userConfig": {
+								"fieldLabel": "Update",
+								"anchor": "100%",
+								"name": "update"
+							}
+						},
+						{
+							"id": "MyTextField1",
+							"cid": "textarea",
+							"jsClass": "MyTextField1",
+							"snapToGrid": 10,
+							"userConfig": {
+								"fieldLabel": "History",
+								"anchor": "100%",
+								"name": "history",
+								"readOnly": true
+							}
+						}
+					]
+				}
+			]
+		}
+	],
+	"stores": [
+		{
+			"id": "MyStore",
+			"cid": "jsonstore",
+			"jsClass": "StoreProjectStage",
+			"snapToGrid": 10,
+			"userConfig": {
+				"storeId": "st_stage_plan"
+			},
+			"cn": [
+				{
+					"id": "MyField",
+					"cid": "datafield",
+					"jsClass": "MyField",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "id",
+						"mapping": "id"
+					}
+				},
+				{
+					"id": "MyField1",
+					"cid": "datafield",
+					"jsClass": "MyField1",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "stage",
+						"mapping": "stage"
+					}
+				},
+				{
+					"id": "MyField2",
+					"cid": "datafield",
+					"jsClass": "MyField2",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "description",
+						"mapping": "description"
+					}
+				},
+				{
+					"id": "MyField3",
+					"cid": "datafield",
+					"jsClass": "MyField3",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "stage_number",
+						"mapping": "stage_number"
+					}
+				}
+			]
+		},
+		{
+			"id": "MyStore1",
+			"cid": "jsonstore",
+			"jsClass": "StoreSkillset",
+			"snapToGrid": 10,
+			"userConfig": {
+				"storeId": "st_skillset",
+				"root": "data",
+				"url": "/api/skillsets/?format=ext-json",
+				"autoLoad": true
+			},
+			"cn": [
+				{
+					"id": "MyField4",
+					"cid": "datafield",
+					"jsClass": "MyField4",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "id",
+						"mapping": "id"
+					}
+				},
+				{
+					"id": "MyField5",
+					"cid": "datafield",
+					"jsClass": "MyField5",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "skillset",
+						"mapping": "skillset"
+					}
+				}
+			]
+		}
+	]
+}

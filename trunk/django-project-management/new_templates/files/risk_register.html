@@ -1,0 +1,69 @@
+{% extends "pdf-base.html" %}
+
+{% block content %}
+
+<h1 style="text-align: center;">Project Risk Register</h1>
+<h1 style="text-align: center;"><small>{{ project.project_name }}</small></h1>
+
+
+
+<table class="pdf-table" border="1" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <th>Project Number</th>
+      <td>{{ project.project_number }}</td>
+      <th>Client</th>
+      <td>{{ project.company.company_name }} </td>
+    </tr>
+    <tr>
+      <th>Project Manager</th>
+      <td>{% if project.project_manager.get_full_name %} {{ project.project_manager.get_full_name }}
+										{% else %} {{ project.project_manager.username }} {% endif %} </td>
+      <th>Date</th>
+      <td>{% now "l jS F Y" %}</td>
+    </tr>
+	<tr>
+      <th>Project Sponsor</th>
+      <td>{{ project.project_sponsor }}</td>
+      <th>Status</th>
+      <td>{{ project.get_project_status_display }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+<h2>Risk Register</h2>
+
+</p>
+<table class="pdf-table" border="1" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <th>Risk Number</th>
+      <th>Description</th>
+      <th>Owner</th>
+      <th>Probability</th>
+      <th>Impact</th>
+      <th>Rating</th>
+      <th>Counter Measure</th>
+      <th>Status</th>
+    </tr>
+	{% for r in project.risks.all %}
+    <tr>
+      <td>{{ r.risk_number }}</td>
+      <td>{{ r.description|linebreaks}}<br> </td>
+      <td>{{ r.owner.get_full_name }} </td>
+      <td>{{ r.get_probability_display }} </td>
+      <td>{{ r.get_impact_display }} </td>
+      <td>{{ r.rating }}<br>
+      <td>{{ r.get_counter_measure_display }}<br>
+      <td>{{ r.get_status_display }}<br>
+      </td>
+    </tr>
+	{% endfor %}
+  </tbody>
+</table>
+
+
+
+
+{% endblock %}

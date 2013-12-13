@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load project_tags %}
+
+{% block extra_javascript %}
+
+
+
+{% endblock %}
+
+
+{% block main_content %}
+
+<div id="center_panel_html">
+
+
+				<table class="project_table">
+					<tr> <th>Number</th><th>Name</th><th>Company</th><th>% Complete</th><th>Status</th><th>RAG Status</th><th>Documentation Status</th> </tr>
+					{% for proj in projects %}
+					<tr> <td><a href="{{ proj.get_absolute_url }}" >{{ proj.project_number }}</a></td><td><a href="{{ proj.get_absolute_url }}">{{ proj.project_name }}</a></td><td>{{ proj.company.company_name }}</td>
+					<td> {% get_project_percent_complete proj %} % </td><td>{{ proj.get_project_status_display }}</td>
+					<td> <p  ext:qtitle="Project Checkpoint Report" ext:qtip="{% get_latest_project_exec_summary proj %}" class="{% get_project_rag_status_css_class proj %}"> {% get_project_rag_status_brief proj %}</td>
+					<td> <p   ext:qtitle="Project Checkpoint Report" ext:qtip="{% get_latest_project_exec_summary proj %}" class="{% get_project_documentation_status_css_class proj %}">{% get_project_documentation_status_brief proj %}</p></td>
+					</tr>
+					{% endfor %}
+				</table>
+
+
+</div>
+{% endblock %}

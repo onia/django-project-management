@@ -1,0 +1,2236 @@
+{
+	"name": "project_management.xds",
+	"projectId": "07920620-D0D0-4A15-A7C1-47D8937C8B85",
+	"settings": {
+		"urlPrefix": "http://localhost/",
+		"spacesToIndent": 4,
+		"codeGenFormat": "Class",
+		"extPath": "http://extjs.cachefly.net/ext-3.2.1/",
+		"exportPath": ".",
+		"lineEnding": "LF"
+	},
+	"xdsVersion": "xds-1.0.2.14",
+	"components": [
+		{
+			"id": "MyPanel",
+			"cid": "panel",
+			"jsClass": "MyPanel",
+			"snapToGrid": 10,
+			"userConfig": {
+				"title": "Project Management",
+				"id": "panel_project_mgmt",
+				"html": "-ext-undefined-"
+			},
+			"userXType": "mypanel",
+			"cn": [
+				{
+					"id": "MyToolbar",
+					"cid": "toolbar",
+					"jsClass": "MyToolbar",
+					"snapToGrid": 10,
+					"userConfig": {
+						"id": "tb_project_toolbar"
+					},
+					"cn": [
+						{
+							"id": "MyButton25",
+							"cid": "button",
+							"jsClass": "MyButton25",
+							"snapToGrid": 10,
+							"userConfig": {
+								"text": "Add",
+								"id": "btn_add_items"
+							},
+							"cn": [
+								{
+									"id": "MyMenu2",
+									"cid": "menu",
+									"jsClass": "MyMenu2",
+									"dock": "menu",
+									"snapToGrid": 10,
+									"userConfig": {
+										"id": "menu_add_items"
+									},
+									"cn": [
+										{
+											"id": "MyMenuItem10",
+											"cid": "menuitem",
+											"jsClass": "MyMenuItem10",
+											"snapToGrid": 10,
+											"userConfig": {
+												"text": "Add Company"
+											}
+										},
+										{
+											"id": "MyMenuItem9",
+											"cid": "menuitem",
+											"jsClass": "MyMenuItem9",
+											"snapToGrid": 10,
+											"userConfig": {
+												"text": "Add Project",
+												"id": "menu_add_project"
+											}
+										},
+										{
+											"id": "MyMenuItem11",
+											"cid": "menuitem",
+											"jsClass": "MyMenuItem11",
+											"snapToGrid": 10,
+											"userConfig": {
+												"text": "Add Skillset"
+											}
+										}
+									]
+								}
+							]
+						},
+						{
+							"id": "MyButton",
+							"cid": "button",
+							"jsClass": "MyButton",
+							"snapToGrid": 10,
+							"userConfig": {
+								"text": "Manage",
+								"id": "btn_manage_project"
+							},
+							"cn": [
+								{
+									"id": "MyMenu",
+									"cid": "menu",
+									"jsClass": "MyMenu",
+									"dock": "menu",
+									"snapToGrid": 10,
+									"userConfig": {
+										"id": "menu_manage_project"
+									},
+									"cn": [
+										{
+											"id": "MyMenuItem",
+											"cid": "menuitem",
+											"jsClass": "MyMenuItem",
+											"snapToGrid": 10,
+											"userConfig": {
+												"text": "Add Deliverable",
+												"id": "menu_add_deliverable"
+											}
+										},
+										{
+											"id": "MyMenuItem1",
+											"cid": "menuitem",
+											"jsClass": "MyMenuItem1",
+											"snapToGrid": 10,
+											"userConfig": {
+												"text": "Add Risk",
+												"id": "menu_add_risk"
+											}
+										},
+										{
+											"id": "MyMenuItem2",
+											"cid": "menuitem",
+											"jsClass": "MyMenuItem2",
+											"snapToGrid": 10,
+											"userConfig": {
+												"text": "Add Issue"
+											}
+										},
+										{
+											"id": "MyMenuItem3",
+											"cid": "menuitem",
+											"jsClass": "MyMenuItem3",
+											"snapToGrid": 10,
+											"userConfig": {
+												"text": "Add Lesson Learnt"
+											}
+										},
+										{
+											"id": "MyMenuItem4",
+											"cid": "menuitem",
+											"jsClass": "MyMenuItem4",
+											"snapToGrid": 10,
+											"userConfig": {
+												"text": "Add Report"
+											}
+										},
+										{
+											"id": "MyMenuItem12",
+											"cid": "menuitem",
+											"jsClass": "MyMenuItem4",
+											"snapToGrid": 10,
+											"userConfig": {
+												"text": "Add Work Item",
+												"id": "menu_add_wbs"
+											}
+										},
+										{
+											"id": "MyMenuItem5",
+											"cid": "menuitem",
+											"jsClass": "MyMenuItem5",
+											"snapToGrid": 10,
+											"userConfig": {
+												"text": "Add File"
+											}
+										},
+										{
+											"id": "MyMenuItem6",
+											"cid": "menuitem",
+											"jsClass": "MyMenuItem6",
+											"snapToGrid": 10,
+											"userConfig": {
+												"text": "Edit Project Initiation"
+											}
+										}
+									]
+								}
+							]
+						},
+						{
+							"id": "MyButton1",
+							"cid": "button",
+							"jsClass": "MyButton1",
+							"snapToGrid": 10,
+							"userConfig": {
+								"text": "View",
+								"id": "btn_view_project"
+							},
+							"cn": [
+								{
+									"id": "MyMenu1",
+									"cid": "menu",
+									"jsClass": "MyMenu1",
+									"dock": "menu",
+									"snapToGrid": 10,
+									"userConfig": {
+										"id": "menu_view_project"
+									},
+									"cn": [
+										{
+											"id": "MyMenuItem7",
+											"cid": "menuitem",
+											"jsClass": "MyMenuItem7",
+											"snapToGrid": 10,
+											"userConfig": {
+												"text": "View Project Timeline"
+											}
+										},
+										{
+											"id": "MyMenuItem8",
+											"cid": "menuitem",
+											"jsClass": "MyMenuItem8",
+											"snapToGrid": 10,
+											"userConfig": {
+												"text": "View Gantt Chart"
+											}
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "MyTabPanel",
+					"cid": "tabpanel",
+					"jsClass": "MyTabPanel",
+					"snapToGrid": 10,
+					"userConfig": {
+						"activeTab": 3,
+						"title": "-ext-undefined-",
+						"height": 462,
+						"padding": "15px"
+					},
+					"cn": [
+						{
+							"id": "MyPanel1",
+							"cid": "panel",
+							"jsClass": "MyPanel1",
+							"snapToGrid": 10,
+							"userConfig": {
+								"title": "Project Initiation"
+							}
+						},
+						{
+							"id": "MyPanel2",
+							"cid": "panel",
+							"jsClass": "MyPanel2",
+							"snapToGrid": 10,
+							"userConfig": {
+								"title": "Deliverables",
+								"padding": "-ext-undefined-"
+							},
+							"cn": [
+								{
+									"id": "MyPanel9",
+									"cid": "panel",
+									"jsClass": "MyPanel9",
+									"snapToGrid": 10,
+									"userConfig": {
+										"title": "-ext-undefined-",
+										"id": "panel_deliverables",
+										"layout": "border",
+										"height": 400,
+										"padding": "-ext-undefined-"
+									},
+									"cn": [
+										{
+											"id": "MyGrid",
+											"cid": "grid",
+											"jsClass": "MyGrid",
+											"snapToGrid": 10,
+											"userConfig": {
+												"title": "-ext-undefined-",
+												"store": "st_deliverables",
+												"id": "grid_deliverables",
+												"region": "west",
+												"split": true,
+												"width": 868
+											},
+											"cn": [
+												{
+													"id": "MyToolbar1",
+													"cid": "toolbar",
+													"jsClass": "MyToolbar1",
+													"dock": "tbar",
+													"snapToGrid": 10,
+													"userConfig": {
+														"id": "tbar_grid_deliverables"
+													},
+													"cn": [
+														{
+															"id": "MyButton2",
+															"cid": "button",
+															"jsClass": "MyButton2",
+															"snapToGrid": 10,
+															"userConfig": {
+																"text": "Add Deliverable",
+																"iconCls": "icon-add",
+																"id": "btn_add_deliverable"
+															}
+														},
+														{
+															"id": "MyButton3",
+															"cid": "button",
+															"jsClass": "MyButton2",
+															"snapToGrid": 10,
+															"userConfig": {
+																"text": "Update Deliverable",
+																"iconCls": "icon-update",
+																"id": "btn_update_deliverable"
+															}
+														},
+														{
+															"id": "MyButton4",
+															"cid": "button",
+															"jsClass": "MyButton2",
+															"snapToGrid": 10,
+															"userConfig": {
+																"text": "Delete Deliverable",
+																"iconCls": "icon-complete",
+																"id": "btn_delete_deliverable"
+															}
+														}
+													]
+												},
+												{
+													"id": "MyColumn",
+													"cid": "gridcolumn",
+													"jsClass": "MyColumn",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "description",
+														"header": "Description",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100
+													}
+												},
+												{
+													"id": "MyColumn1",
+													"cid": "gridcolumn",
+													"jsClass": "MyColumn1",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "acceptance_criteria",
+														"header": "Acceptance Criteria",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100,
+														"align": "right",
+														"hidden": true
+													}
+												},
+												{
+													"id": "MyColumn2",
+													"cid": "gridcolumn",
+													"jsClass": "MyColumn2",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "deliverable_tester",
+														"header": "Deliverable Tester",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100
+													}
+												},
+												{
+													"id": "MyColumn3",
+													"cid": "gridcolumn",
+													"jsClass": "MyColumn3",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "testing_method",
+														"header": "Testing Method",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100,
+														"hidden": true
+													}
+												},
+												{
+													"id": "MyColumn4",
+													"cid": "gridcolumn",
+													"jsClass": "MyColumn3",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "expected_result",
+														"header": "Expected Result",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100,
+														"hidden": true
+													}
+												},
+												{
+													"id": "MyColumn5",
+													"cid": "gridcolumn",
+													"jsClass": "MyColumn3",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "rto",
+														"header": "RTO",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100,
+														"hidden": true
+													}
+												},
+												{
+													"id": "MyColumn8",
+													"cid": "gridcolumn",
+													"jsClass": "MyColumn3",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "rpo",
+														"header": "RPO",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100,
+														"hidden": true
+													}
+												},
+												{
+													"id": "MyColumn6",
+													"cid": "datecolumn",
+													"jsClass": "MyColumn3",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "created_date",
+														"header": "Created Date",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100,
+														"hidden": true
+													}
+												},
+												{
+													"id": "MyColumn7",
+													"cid": "datecolumn",
+													"jsClass": "MyColumn3",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "modified_date",
+														"header": "Modified Date",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100,
+														"hidden": true
+													}
+												}
+											]
+										},
+										{
+											"id": "MyPanel10",
+											"cid": "panel",
+											"jsClass": "MyPanel10",
+											"snapToGrid": 10,
+											"userConfig": {
+												"title": "-ext-undefined-",
+												"region": "center",
+												"id": "panel_deliverables_detail",
+												"html": "Please select an object to see more details",
+												"padding": "12px"
+											}
+										}
+									]
+								}
+							]
+						},
+						{
+							"id": "MyPanel3",
+							"cid": "panel",
+							"jsClass": "MyPanel3",
+							"snapToGrid": 10,
+							"userConfig": {
+								"title": "Risks"
+							},
+							"cn": [
+								{
+									"id": "MyPanel11",
+									"cid": "panel",
+									"jsClass": "MyPanel9",
+									"snapToGrid": 10,
+									"userConfig": {
+										"title": "-ext-undefined-",
+										"id": "panel_risks",
+										"layout": "border",
+										"height": 400
+									},
+									"cn": [
+										{
+											"id": "MyGrid1",
+											"cid": "grid",
+											"jsClass": "MyGrid",
+											"snapToGrid": 10,
+											"userConfig": {
+												"title": "-ext-undefined-",
+												"store": "st_risks",
+												"id": "grid_risks",
+												"region": "west",
+												"split": true,
+												"width": 868
+											},
+											"cn": [
+												{
+													"id": "MyToolbar2",
+													"cid": "toolbar",
+													"jsClass": "MyToolbar1",
+													"dock": "tbar",
+													"snapToGrid": 10,
+													"userConfig": {
+														"id": "tbar_grid_risks"
+													},
+													"cn": [
+														{
+															"id": "MyButton5",
+															"cid": "button",
+															"jsClass": "MyButton2",
+															"snapToGrid": 10,
+															"userConfig": {
+																"text": "Add Risk",
+																"id": "btn_add_risk"
+															}
+														},
+														{
+															"id": "MyButton6",
+															"cid": "button",
+															"jsClass": "MyButton2",
+															"snapToGrid": 10,
+															"userConfig": {
+																"text": "Update Risk"
+															}
+														},
+														{
+															"id": "MyButton7",
+															"cid": "button",
+															"jsClass": "MyButton2",
+															"snapToGrid": 10,
+															"userConfig": {
+																"text": "Delete Risk"
+															}
+														}
+													]
+												},
+												{
+													"id": "MyColumn9",
+													"cid": "gridcolumn",
+													"jsClass": "MyColumn",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "risk_number",
+														"header": "Risk Number",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100
+													}
+												},
+												{
+													"id": "MyColumn10",
+													"cid": "gridcolumn",
+													"jsClass": "MyColumn1",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "description",
+														"header": "Description",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100,
+														"align": "right",
+														"hidden": "-ext-undefined-"
+													}
+												},
+												{
+													"id": "MyColumn11",
+													"cid": "numbercolumn",
+													"jsClass": "MyColumn2",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "probability",
+														"header": "Probability",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100,
+														"align": "right"
+													}
+												},
+												{
+													"id": "MyColumn12",
+													"cid": "numbercolumn",
+													"jsClass": "MyColumn3",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "impact",
+														"header": "Impact",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100,
+														"hidden": "-ext-undefined-",
+														"align": "right"
+													}
+												},
+												{
+													"id": "MyColumn13",
+													"cid": "numbercolumn",
+													"jsClass": "MyColumn3",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "rating",
+														"header": "Rating",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100,
+														"hidden": "-ext-undefined-",
+														"align": "right"
+													}
+												},
+												{
+													"id": "MyColumn16",
+													"cid": "datecolumn",
+													"jsClass": "MyColumn3",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "created_date",
+														"header": "Created Date",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100,
+														"hidden": true
+													}
+												},
+												{
+													"id": "MyColumn17",
+													"cid": "datecolumn",
+													"jsClass": "MyColumn3",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "modified_date",
+														"header": "Modified Date",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100,
+														"hidden": true
+													}
+												}
+											]
+										},
+										{
+											"id": "MyPanel23",
+											"cid": "panel",
+											"jsClass": "MyPanel10",
+											"snapToGrid": 10,
+											"userConfig": {
+												"title": "-ext-undefined-",
+												"region": "center",
+												"id": "panel_risks_detail",
+												"html": "Please select an object to see more details",
+												"padding": "12px"
+											}
+										}
+									]
+								}
+							]
+						},
+						{
+							"id": "MyPanel4",
+							"cid": "panel",
+							"jsClass": "MyPanel3",
+							"snapToGrid": 10,
+							"userConfig": {
+								"title": "Work Items"
+							},
+							"cn": [
+								{
+									"id": "MyPanel13",
+									"cid": "panel",
+									"jsClass": "MyPanel9",
+									"snapToGrid": 10,
+									"userConfig": {
+										"title": "-ext-undefined-",
+										"id": "panel_wbs",
+										"layout": "border",
+										"height": 400
+									},
+									"cn": [
+										{
+											"id": "MyGrid2",
+											"cid": "grid",
+											"jsClass": "MyGrid",
+											"snapToGrid": 10,
+											"userConfig": {
+												"title": "-ext-undefined-",
+												"store": "st_wbs",
+												"id": "grid_wbs",
+												"region": "west",
+												"split": true,
+												"width": 868
+											},
+											"cn": [
+												{
+													"id": "MyToolbar3",
+													"cid": "toolbar",
+													"jsClass": "MyToolbar1",
+													"dock": "tbar",
+													"snapToGrid": 10,
+													"userConfig": {
+														"id": "tbar_grid_wbs"
+													},
+													"cn": [
+														{
+															"id": "MyButton8",
+															"cid": "button",
+															"jsClass": "MyButton2",
+															"snapToGrid": 10,
+															"userConfig": {
+																"text": "Add Project Stage"
+															}
+														},
+														{
+															"id": "MyButton11",
+															"cid": "button",
+															"jsClass": "MyButton2",
+															"snapToGrid": 10,
+															"userConfig": {
+																"text": "Add Work Item",
+																"id": "btn_add_wbs"
+															}
+														},
+														{
+															"id": "MyButton9",
+															"cid": "button",
+															"jsClass": "MyButton2",
+															"snapToGrid": 10,
+															"userConfig": {
+																"text": "Update Work Item"
+															}
+														},
+														{
+															"id": "MyButton10",
+															"cid": "button",
+															"jsClass": "MyButton2",
+															"snapToGrid": 10,
+															"userConfig": {
+																"text": "Delete Work Item"
+															}
+														},
+														{
+															"id": "MyButton12",
+															"cid": "button",
+															"jsClass": "MyButton2",
+															"snapToGrid": 10,
+															"userConfig": {
+																"text": "Add Engineering Day"
+															}
+														}
+													]
+												},
+												{
+													"id": "MyColumn14",
+													"cid": "numbercolumn",
+													"jsClass": "MyColumn",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "wbs_number",
+														"header": "WBS Number",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100,
+														"align": "right"
+													}
+												},
+												{
+													"id": "MyColumn15",
+													"cid": "gridcolumn",
+													"jsClass": "MyColumn1",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "skill_set",
+														"header": "Skillset",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100,
+														"align": "right",
+														"hidden": "-ext-undefined-"
+													}
+												},
+												{
+													"id": "MyColumn23",
+													"cid": "gridcolumn",
+													"jsClass": "MyColumn1",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "stage",
+														"header": "Stage",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100,
+														"align": "right",
+														"hidden": "-ext-undefined-"
+													}
+												},
+												{
+													"id": "MyColumn24",
+													"cid": "gridcolumn",
+													"jsClass": "MyColumn1",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "author",
+														"header": "Author",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100,
+														"align": "right",
+														"hidden": "-ext-undefined-"
+													}
+												},
+												{
+													"id": "MyColumn25",
+													"cid": "gridcolumn",
+													"jsClass": "MyColumn1",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "title",
+														"header": "Title",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100,
+														"align": "right",
+														"hidden": "-ext-undefined-"
+													}
+												},
+												{
+													"id": "MyColumn26",
+													"cid": "gridcolumn",
+													"jsClass": "MyColumn1",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "description",
+														"header": "Description",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100,
+														"align": "right",
+														"hidden": "-ext-undefined-"
+													}
+												},
+												{
+													"id": "MyColumn18",
+													"cid": "numbercolumn",
+													"jsClass": "MyColumn2",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "duration",
+														"header": "Duration",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100,
+														"align": "right"
+													}
+												},
+												{
+													"id": "MyColumn27",
+													"cid": "gridcolumn",
+													"jsClass": "MyColumn1",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "owner",
+														"header": "Owner",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100,
+														"align": "right",
+														"hidden": "-ext-undefined-"
+													}
+												},
+												{
+													"id": "MyColumn19",
+													"cid": "numbercolumn",
+													"jsClass": "MyColumn3",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "percent_complete",
+														"header": "Percent Complete",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100,
+														"hidden": "-ext-undefined-",
+														"align": "right"
+													}
+												},
+												{
+													"id": "MyColumn28",
+													"cid": "datecolumn",
+													"jsClass": "MyColumn3",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "start_date",
+														"header": "Start Date",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100,
+														"hidden": true
+													}
+												},
+												{
+													"id": "MyColumn29",
+													"cid": "datecolumn",
+													"jsClass": "MyColumn3",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "finish_date",
+														"header": "Finish Date",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100,
+														"hidden": true
+													}
+												},
+												{
+													"id": "MyColumn30",
+													"cid": "gridcolumn",
+													"jsClass": "MyColumn1",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "work_status",
+														"header": "Work Status",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100,
+														"align": "right",
+														"hidden": "-ext-undefined-"
+													}
+												},
+												{
+													"id": "MyColumn20",
+													"cid": "numbercolumn",
+													"jsClass": "MyColumn3",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "cost",
+														"header": "Cost",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100,
+														"hidden": "-ext-undefined-",
+														"align": "right"
+													}
+												},
+												{
+													"id": "MyColumn21",
+													"cid": "datecolumn",
+													"jsClass": "MyColumn3",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "created_date",
+														"header": "Created Date",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100,
+														"hidden": true
+													}
+												},
+												{
+													"id": "MyColumn22",
+													"cid": "datecolumn",
+													"jsClass": "MyColumn3",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "modified_date",
+														"header": "Modified Date",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100,
+														"hidden": true
+													}
+												}
+											]
+										},
+										{
+											"id": "MyPanel14",
+											"cid": "panel",
+											"jsClass": "MyPanel10",
+											"snapToGrid": 10,
+											"userConfig": {
+												"title": "-ext-undefined-",
+												"region": "center",
+												"id": "panel_wbs_detail",
+												"html": "Please select an object to see more details",
+												"padding": "12px"
+											}
+										}
+									]
+								}
+							]
+						},
+						{
+							"id": "MyPanel5",
+							"cid": "panel",
+							"jsClass": "MyPanel3",
+							"snapToGrid": 10,
+							"userConfig": {
+								"title": "Issues"
+							},
+							"cn": [
+								{
+									"id": "MyPanel15",
+									"cid": "panel",
+									"jsClass": "MyPanel9",
+									"snapToGrid": 10,
+									"userConfig": {
+										"title": "-ext-undefined-",
+										"id": "panel_issues",
+										"layout": "border",
+										"height": 400
+									},
+									"cn": [
+										{
+											"id": "MyGrid3",
+											"cid": "grid",
+											"jsClass": "MyGrid",
+											"snapToGrid": 10,
+											"userConfig": {
+												"title": "-ext-undefined-",
+												"store": "st_risks",
+												"id": "grid_issues",
+												"region": "west",
+												"split": true,
+												"width": 868
+											},
+											"cn": [
+												{
+													"id": "MyToolbar4",
+													"cid": "toolbar",
+													"jsClass": "MyToolbar1",
+													"dock": "tbar",
+													"snapToGrid": 10,
+													"userConfig": {
+														"id": "tbar_grid_issues"
+													},
+													"cn": [
+														{
+															"id": "MyButton13",
+															"cid": "button",
+															"jsClass": "MyButton2",
+															"snapToGrid": 10,
+															"userConfig": {
+																"text": "Add Issue"
+															}
+														},
+														{
+															"id": "MyButton14",
+															"cid": "button",
+															"jsClass": "MyButton2",
+															"snapToGrid": 10,
+															"userConfig": {
+																"text": "Update Issue"
+															}
+														},
+														{
+															"id": "MyButton15",
+															"cid": "button",
+															"jsClass": "MyButton2",
+															"snapToGrid": 10,
+															"userConfig": {
+																"text": "Delete Issue"
+															}
+														}
+													]
+												},
+												{
+													"id": "MyColumn32",
+													"cid": "gridcolumn",
+													"jsClass": "MyColumn1",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "description",
+														"header": "Description",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100,
+														"align": "right",
+														"hidden": "-ext-undefined-"
+													}
+												},
+												{
+													"id": "MyColumn31",
+													"cid": "gridcolumn",
+													"jsClass": "MyColumn",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "owner",
+														"header": "Owner",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100
+													}
+												},
+												{
+													"id": "MyColumn38",
+													"cid": "gridcolumn",
+													"jsClass": "MyColumn",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "author",
+														"header": "Author",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100
+													}
+												},
+												{
+													"id": "MyColumn39",
+													"cid": "gridcolumn",
+													"jsClass": "MyColumn",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "status",
+														"header": "Status",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100
+													}
+												},
+												{
+													"id": "MyColumn40",
+													"cid": "gridcolumn",
+													"jsClass": "MyColumn",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "type",
+														"header": "Type",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100
+													}
+												},
+												{
+													"id": "MyColumn33",
+													"cid": "numbercolumn",
+													"jsClass": "MyColumn2",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "priority",
+														"header": "Priority",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100,
+														"align": "right"
+													}
+												},
+												{
+													"id": "MyColumn36",
+													"cid": "datecolumn",
+													"jsClass": "MyColumn3",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "created_date",
+														"header": "Created Date",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100,
+														"hidden": true
+													}
+												},
+												{
+													"id": "MyColumn37",
+													"cid": "datecolumn",
+													"jsClass": "MyColumn3",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "modified_date",
+														"header": "Modified Date",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100,
+														"hidden": true
+													}
+												}
+											]
+										},
+										{
+											"id": "MyPanel16",
+											"cid": "panel",
+											"jsClass": "MyPanel10",
+											"snapToGrid": 10,
+											"userConfig": {
+												"title": "-ext-undefined-",
+												"region": "center",
+												"id": "panel_issues_detail",
+												"html": "Please select an object to see more details",
+												"padding": "12px"
+											}
+										}
+									]
+								}
+							]
+						},
+						{
+							"id": "MyPanel6",
+							"cid": "panel",
+							"jsClass": "MyPanel3",
+							"snapToGrid": 10,
+							"userConfig": {
+								"title": "Lessons Learnt"
+							},
+							"cn": [
+								{
+									"id": "MyPanel17",
+									"cid": "panel",
+									"jsClass": "MyPanel9",
+									"snapToGrid": 10,
+									"userConfig": {
+										"title": "-ext-undefined-",
+										"id": "panel_lessons",
+										"layout": "border",
+										"height": 400
+									},
+									"cn": [
+										{
+											"id": "MyGrid4",
+											"cid": "grid",
+											"jsClass": "MyGrid",
+											"snapToGrid": 10,
+											"userConfig": {
+												"title": "-ext-undefined-",
+												"store": "st_risks",
+												"id": "grid_lessons",
+												"region": "west",
+												"split": true,
+												"width": 868
+											},
+											"cn": [
+												{
+													"id": "MyToolbar5",
+													"cid": "toolbar",
+													"jsClass": "MyToolbar1",
+													"dock": "tbar",
+													"snapToGrid": 10,
+													"userConfig": {
+														"id": "tbar_grid_lessons"
+													},
+													"cn": [
+														{
+															"id": "MyButton16",
+															"cid": "button",
+															"jsClass": "MyButton2",
+															"snapToGrid": 10,
+															"userConfig": {
+																"text": "Add Lesson"
+															}
+														},
+														{
+															"id": "MyButton17",
+															"cid": "button",
+															"jsClass": "MyButton2",
+															"snapToGrid": 10,
+															"userConfig": {
+																"text": "Update Lesson"
+															}
+														},
+														{
+															"id": "MyButton18",
+															"cid": "button",
+															"jsClass": "MyButton2",
+															"snapToGrid": 10,
+															"userConfig": {
+																"text": "Delete Lesson"
+															}
+														}
+													]
+												},
+												{
+													"id": "MyColumn34",
+													"cid": "gridcolumn",
+													"jsClass": "MyColumn1",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "description",
+														"header": "Description",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100,
+														"align": "right",
+														"hidden": "-ext-undefined-"
+													}
+												},
+												{
+													"id": "MyColumn41",
+													"cid": "gridcolumn",
+													"jsClass": "MyColumn",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "author",
+														"header": "Author",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100
+													}
+												},
+												{
+													"id": "MyColumn45",
+													"cid": "datecolumn",
+													"jsClass": "MyColumn3",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "created_date",
+														"header": "Created Date",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100,
+														"hidden": true
+													}
+												},
+												{
+													"id": "MyColumn46",
+													"cid": "datecolumn",
+													"jsClass": "MyColumn3",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "modified_date",
+														"header": "Modified Date",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100,
+														"hidden": true
+													}
+												}
+											]
+										},
+										{
+											"id": "MyPanel18",
+											"cid": "panel",
+											"jsClass": "MyPanel10",
+											"snapToGrid": 10,
+											"userConfig": {
+												"title": "-ext-undefined-",
+												"region": "center",
+												"id": "panel_lessons_detail",
+												"html": "Please select an object to see more details",
+												"padding": "12px"
+											}
+										}
+									]
+								}
+							]
+						},
+						{
+							"id": "MyPanel7",
+							"cid": "panel",
+							"jsClass": "MyPanel3",
+							"snapToGrid": 10,
+							"userConfig": {
+								"title": "Reports"
+							},
+							"cn": [
+								{
+									"id": "MyPanel19",
+									"cid": "panel",
+									"jsClass": "MyPanel9",
+									"snapToGrid": 10,
+									"userConfig": {
+										"title": "-ext-undefined-",
+										"id": "panel_reports",
+										"layout": "border",
+										"height": 400
+									},
+									"cn": [
+										{
+											"id": "MyGrid5",
+											"cid": "grid",
+											"jsClass": "MyGrid",
+											"snapToGrid": 10,
+											"userConfig": {
+												"title": "-ext-undefined-",
+												"store": "st_risks",
+												"id": "grid_reports",
+												"region": "west",
+												"split": true,
+												"width": 868
+											},
+											"cn": [
+												{
+													"id": "MyToolbar6",
+													"cid": "toolbar",
+													"jsClass": "MyToolbar1",
+													"dock": "tbar",
+													"snapToGrid": 10,
+													"userConfig": {
+														"id": "tbar_grid_reports"
+													},
+													"cn": [
+														{
+															"id": "MyButton19",
+															"cid": "button",
+															"jsClass": "MyButton2",
+															"snapToGrid": 10,
+															"userConfig": {
+																"text": "Add Report"
+															}
+														},
+														{
+															"id": "MyButton20",
+															"cid": "button",
+															"jsClass": "MyButton2",
+															"snapToGrid": 10,
+															"userConfig": {
+																"text": "Update Report"
+															}
+														},
+														{
+															"id": "MyButton21",
+															"cid": "button",
+															"jsClass": "MyButton2",
+															"snapToGrid": 10,
+															"userConfig": {
+																"text": "Delete Report"
+															}
+														}
+													]
+												},
+												{
+													"id": "MyColumn42",
+													"cid": "gridcolumn",
+													"jsClass": "MyColumn",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "author",
+														"header": "Author",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100
+													}
+												},
+												{
+													"id": "MyColumn35",
+													"cid": "gridcolumn",
+													"jsClass": "MyColumn1",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "type",
+														"header": "Type",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100,
+														"align": "right",
+														"hidden": "-ext-undefined-"
+													}
+												},
+												{
+													"id": "MyColumn47",
+													"cid": "gridcolumn",
+													"jsClass": "MyColumn1",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "summary",
+														"header": "Summary",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100,
+														"align": "right",
+														"hidden": "-ext-undefined-"
+													}
+												},
+												{
+													"id": "MyColumn43",
+													"cid": "datecolumn",
+													"jsClass": "MyColumn3",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "created_date",
+														"header": "Created Date",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100,
+														"hidden": true
+													}
+												},
+												{
+													"id": "MyColumn44",
+													"cid": "datecolumn",
+													"jsClass": "MyColumn3",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "modified_date",
+														"header": "Modified Date",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100,
+														"hidden": true
+													}
+												}
+											]
+										},
+										{
+											"id": "MyPanel20",
+											"cid": "panel",
+											"jsClass": "MyPanel10",
+											"snapToGrid": 10,
+											"userConfig": {
+												"title": "-ext-undefined-",
+												"region": "center",
+												"id": "panel_reports_detail",
+												"html": "Please select an object to see more details",
+												"padding": "12px"
+											}
+										}
+									]
+								}
+							]
+						},
+						{
+							"id": "MyPanel8",
+							"cid": "panel",
+							"jsClass": "MyPanel3",
+							"snapToGrid": 10,
+							"userConfig": {
+								"title": "Files"
+							},
+							"cn": [
+								{
+									"id": "MyPanel21",
+									"cid": "panel",
+									"jsClass": "MyPanel9",
+									"snapToGrid": 10,
+									"userConfig": {
+										"title": "-ext-undefined-",
+										"id": "panel_files",
+										"layout": "border",
+										"height": 400
+									},
+									"cn": [
+										{
+											"id": "MyGrid6",
+											"cid": "grid",
+											"jsClass": "MyGrid",
+											"snapToGrid": 10,
+											"userConfig": {
+												"title": "-ext-undefined-",
+												"store": "st_risks",
+												"id": "grid_files",
+												"region": "west",
+												"split": true,
+												"width": 868
+											},
+											"cn": [
+												{
+													"id": "MyToolbar7",
+													"cid": "toolbar",
+													"jsClass": "MyToolbar1",
+													"dock": "tbar",
+													"snapToGrid": 10,
+													"userConfig": {
+														"id": "tbar_grid_files"
+													},
+													"cn": [
+														{
+															"id": "MyButton22",
+															"cid": "button",
+															"jsClass": "MyButton2",
+															"snapToGrid": 10,
+															"userConfig": {
+																"text": "Add File"
+															}
+														},
+														{
+															"id": "MyButton23",
+															"cid": "button",
+															"jsClass": "MyButton2",
+															"snapToGrid": 10,
+															"userConfig": {
+																"text": "Update File"
+															}
+														},
+														{
+															"id": "MyButton24",
+															"cid": "button",
+															"jsClass": "MyButton2",
+															"snapToGrid": 10,
+															"userConfig": {
+																"text": "Delete File"
+															}
+														}
+													]
+												},
+												{
+													"id": "MyColumn50",
+													"cid": "gridcolumn",
+													"jsClass": "MyColumn1",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "description",
+														"header": "Description",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100,
+														"align": "right",
+														"hidden": "-ext-undefined-"
+													}
+												},
+												{
+													"id": "MyColumn49",
+													"cid": "gridcolumn",
+													"jsClass": "MyColumn1",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "file_type",
+														"header": "File Type",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100,
+														"align": "right",
+														"hidden": "-ext-undefined-"
+													}
+												},
+												{
+													"id": "MyColumn48",
+													"cid": "gridcolumn",
+													"jsClass": "MyColumn",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "author",
+														"header": "Author",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100
+													}
+												},
+												{
+													"id": "MyColumn51",
+													"cid": "datecolumn",
+													"jsClass": "MyColumn3",
+													"snapToGrid": 10,
+													"userConfig": {
+														"dataIndex": "created_date",
+														"header": "Created Date",
+														"sortable": true,
+														"resizable": "-ext-undefined-",
+														"width": 100,
+														"hidden": true
+													}
+												}
+											]
+										},
+										{
+											"id": "MyPanel22",
+											"cid": "panel",
+											"jsClass": "MyPanel10",
+											"snapToGrid": 10,
+											"userConfig": {
+												"title": "-ext-undefined-",
+												"region": "center",
+												"id": "panel_files_detail",
+												"html": "Please select an object to see more details",
+												"padding": "12px"
+											}
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"stores": [
+		{
+			"id": "MyStore",
+			"cid": "jsonstore",
+			"jsClass": "StoreDeliverables",
+			"snapToGrid": 10,
+			"userConfig": {
+				"storeId": "st_deliverables",
+				"root": "data",
+				"url": "",
+				"autoLoad": "-ext-undefined-"
+			},
+			"cn": [
+				{
+					"id": "MyField",
+					"cid": "datafield",
+					"jsClass": "MyField",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "description",
+						"mapping": "description"
+					}
+				},
+				{
+					"id": "MyField1",
+					"cid": "datafield",
+					"jsClass": "MyField1",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "id",
+						"mapping": "id"
+					}
+				},
+				{
+					"id": "MyField2",
+					"cid": "datafield",
+					"jsClass": "MyField2",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "acceptance_criteria",
+						"mapping": "acceptance_criteria"
+					}
+				},
+				{
+					"id": "MyField3",
+					"cid": "datafield",
+					"jsClass": "MyField3",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "deliverable_tester",
+						"mapping": "deliverable_tester"
+					}
+				},
+				{
+					"id": "MyField4",
+					"cid": "datafield",
+					"jsClass": "MyField4",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "testing_method",
+						"mapping": "testing_method"
+					}
+				},
+				{
+					"id": "MyField5",
+					"cid": "datafield",
+					"jsClass": "MyField5",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "expected_result",
+						"mapping": "expected_result"
+					}
+				},
+				{
+					"id": "MyField6",
+					"cid": "datafield",
+					"jsClass": "MyField6",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "rpo",
+						"mapping": "rpo"
+					}
+				},
+				{
+					"id": "MyField7",
+					"cid": "datafield",
+					"jsClass": "MyField7",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "rto",
+						"mapping": "rto"
+					}
+				},
+				{
+					"id": "MyField8",
+					"cid": "datafield",
+					"jsClass": "MyField8",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "created_date",
+						"mapping": "created_date",
+						"type": "date"
+					}
+				},
+				{
+					"id": "MyField9",
+					"cid": "datafield",
+					"jsClass": "MyField9",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "modified_date",
+						"mapping": "modified_date",
+						"type": "date"
+					}
+				}
+			]
+		},
+		{
+			"id": "MyStore1",
+			"cid": "jsonstore",
+			"jsClass": "StoreRisks",
+			"snapToGrid": 10,
+			"userConfig": {
+				"storeId": "st_risks",
+				"root": "data"
+			},
+			"cn": [
+				{
+					"id": "MyField10",
+					"cid": "datafield",
+					"jsClass": "MyField10",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "id",
+						"mapping": "id"
+					}
+				},
+				{
+					"id": "MyField11",
+					"cid": "datafield",
+					"jsClass": "MyField11",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "risk_number",
+						"mapping": "risk_number"
+					}
+				},
+				{
+					"id": "MyField12",
+					"cid": "datafield",
+					"jsClass": "MyField12",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "description",
+						"mapping": "description"
+					}
+				},
+				{
+					"id": "MyField13",
+					"cid": "datafield",
+					"jsClass": "MyField13",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "owner",
+						"mapping": "owner"
+					}
+				},
+				{
+					"id": "MyField14",
+					"cid": "datafield",
+					"jsClass": "MyField14",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "probability",
+						"mapping": "probability",
+						"type": "-ext-undefined-"
+					}
+				},
+				{
+					"id": "MyField15",
+					"cid": "datafield",
+					"jsClass": "MyField15",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "impact",
+						"mapping": "impact",
+						"type": "-ext-undefined-"
+					}
+				},
+				{
+					"id": "MyField16",
+					"cid": "datafield",
+					"jsClass": "MyField16",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "rating",
+						"mapping": "rating",
+						"type": "-ext-undefined-"
+					}
+				},
+				{
+					"id": "MyField17",
+					"cid": "datafield",
+					"jsClass": "MyField17",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "history",
+						"mapping": "history"
+					}
+				},
+				{
+					"id": "MyField18",
+					"cid": "datafield",
+					"jsClass": "MyField18",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "history_html",
+						"mapping": "history_html"
+					}
+				},
+				{
+					"id": "MyField19",
+					"cid": "datafield",
+					"jsClass": "MyField19",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "counter_measure",
+						"mapping": "counter_measure"
+					}
+				},
+				{
+					"id": "MyField20",
+					"cid": "datafield",
+					"jsClass": "MyField20",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "status",
+						"mapping": "status"
+					}
+				},
+				{
+					"id": "MyField21",
+					"cid": "datafield",
+					"jsClass": "MyField21",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "created_date",
+						"mapping": "created_date",
+						"type": "date"
+					}
+				},
+				{
+					"id": "MyField22",
+					"cid": "datafield",
+					"jsClass": "MyField22",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "modified_date",
+						"mapping": "modified_date",
+						"type": "date"
+					}
+				}
+			]
+		},
+		{
+			"id": "MyStore2",
+			"cid": "jsonstore",
+			"jsClass": "StoreResources",
+			"snapToGrid": 10,
+			"userConfig": {
+				"storeId": "st_resources",
+				"root": "data"
+			},
+			"cn": [
+				{
+					"id": "MyField23",
+					"cid": "datafield",
+					"jsClass": "MyField23",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "id",
+						"mapping": "id"
+					}
+				},
+				{
+					"id": "MyField24",
+					"cid": "datafield",
+					"jsClass": "MyField24",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "data",
+						"mapping": "username"
+					}
+				}
+			]
+		},
+		{
+			"id": "MyStore4",
+			"cid": "jsonstore",
+			"jsClass": "StoreStagePlan",
+			"snapToGrid": 10,
+			"userConfig": {
+				"storeId": "st_stage_plan",
+				"root": "data"
+			},
+			"cn": [
+				{
+					"id": "MyField27",
+					"cid": "datafield",
+					"jsClass": "MyField23",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "id",
+						"mapping": "id"
+					}
+				},
+				{
+					"id": "MyField28",
+					"cid": "datafield",
+					"jsClass": "MyField24",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "stage",
+						"mapping": "stage"
+					}
+				},
+				{
+					"id": "MyField29",
+					"cid": "datafield",
+					"jsClass": "MyField29",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "description",
+						"mapping": "description"
+					}
+				},
+				{
+					"id": "MyField30",
+					"cid": "datafield",
+					"jsClass": "MyField30",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "stage_number",
+						"mapping": "stage_number"
+					}
+				}
+			]
+		},
+		{
+			"id": "MyStore3",
+			"cid": "jsonstore",
+			"jsClass": "StoreWBS",
+			"snapToGrid": 10,
+			"userConfig": {
+				"storeId": "st_wbs",
+				"root": "data"
+			},
+			"cn": [
+				{
+					"id": "MyField25",
+					"cid": "datafield",
+					"jsClass": "MyField25",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "id",
+						"mapping": "id"
+					}
+				},
+				{
+					"id": "MyField26",
+					"cid": "datafield",
+					"jsClass": "MyField26",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "skill_set",
+						"mapping": "skill_set"
+					}
+				},
+				{
+					"id": "MyField31",
+					"cid": "datafield",
+					"jsClass": "MyField31",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "project_stage",
+						"mapping": "project_stage"
+					}
+				},
+				{
+					"id": "MyField32",
+					"cid": "datafield",
+					"jsClass": "MyField32",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "author",
+						"mapping": "author"
+					}
+				},
+				{
+					"id": "MyField33",
+					"cid": "datafield",
+					"jsClass": "MyField33",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "title",
+						"mapping": "title"
+					}
+				},
+				{
+					"id": "MyField34",
+					"cid": "datafield",
+					"jsClass": "MyField34",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "depends",
+						"mapping": "depends"
+					}
+				},
+				{
+					"id": "MyField35",
+					"cid": "datafield",
+					"jsClass": "MyField35",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "description",
+						"mapping": "description"
+					}
+				},
+				{
+					"id": "MyField36",
+					"cid": "datafield",
+					"jsClass": "MyField36",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "duration",
+						"mapping": "duration"
+					}
+				},
+				{
+					"id": "MyField37",
+					"cid": "datafield",
+					"jsClass": "MyField37",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "owner",
+						"mapping": "owner"
+					}
+				},
+				{
+					"id": "MyField38",
+					"cid": "datafield",
+					"jsClass": "MyField38",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "percent_complete",
+						"mapping": "percent_complete"
+					}
+				},
+				{
+					"id": "MyField39",
+					"cid": "datafield",
+					"jsClass": "MyField39",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "start_date",
+						"mapping": "start_date",
+						"type": "date"
+					}
+				},
+				{
+					"id": "MyField40",
+					"cid": "datafield",
+					"jsClass": "MyField40",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "finish_date",
+						"mapping": "finish_date",
+						"type": "date"
+					}
+				},
+				{
+					"id": "MyField41",
+					"cid": "datafield",
+					"jsClass": "MyField41",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "wbs_number",
+						"mapping": "wbs_number"
+					}
+				},
+				{
+					"id": "MyField42",
+					"cid": "datafield",
+					"jsClass": "MyField42",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "cost",
+						"mapping": "cost"
+					}
+				},
+				{
+					"id": "MyField43",
+					"cid": "datafield",
+					"jsClass": "MyField43",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "history",
+						"mapping": "history"
+					}
+				},
+				{
+					"id": "MyField44",
+					"cid": "datafield",
+					"jsClass": "MyField44",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "history_html",
+						"mapping": "history_html"
+					}
+				},
+				{
+					"id": "MyField45",
+					"cid": "datafield",
+					"jsClass": "MyField45",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "engineering_days",
+						"mapping": "engineering_days"
+					}
+				},
+				{
+					"id": "MyField46",
+					"cid": "datafield",
+					"jsClass": "MyField46",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "get_work_item_status",
+						"mapping": "get_work_item_status"
+					}
+				},
+				{
+					"id": "MyField47",
+					"cid": "datafield",
+					"jsClass": "MyField47",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "created_date",
+						"mapping": "created_date",
+						"type": "date"
+					}
+				},
+				{
+					"id": "MyField48",
+					"cid": "datafield",
+					"jsClass": "MyField48",
+					"snapToGrid": 10,
+					"userConfig": {
+						"name": "modified_date",
+						"mapping": "modified_date"
+					}
+				}
+			]
+		}
+	]
+}

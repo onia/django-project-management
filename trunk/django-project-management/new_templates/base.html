@@ -1,0 +1,31 @@
+<html>
+<head>
+   <title>{% block title %} {% endblock %}</title>
+   <link rel="stylesheet" type="text/css" href="/site_media/js/ext-3.2.0/resources/css/ext-all.css" />
+   <link rel="stylesheet" type="text/css" href="/site_media/css/projects.css" />
+   <script src="/site_media/js/ext-3.2.0/adapter/ext/ext-base.js"></script>
+   <script src="/site_media/js/ext-3.2.0/ext-all.js"></script>
+   <script src="/site_media/js/main-ui.js"></script>
+	
+
+	{% block extra_javascript %} {% endblock %}
+	<script type="text/javascript">
+
+	Ext.onReady(function(){
+		var container=new Ext.Viewport({
+    		layout: 'border',
+    		defaults: { collapsible: true, split: true, bodyStyle: 'padding:15px' },
+    		items: [ west_panel, center_panel ]
+		});
+	});
+
+	</script>
+</head>
+<body {% block body_tag %} {% endblock %}>
+   <!-- Nothing in the body -->
+
+{% block main_content %}{% endblock %}
+
+</body>
+</html>
+

@@ -1,0 +1,480 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: django-cms\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-02-24 12:44+0100\n"
+"PO-Revision-Date: 2009-02-24 21:32+0100\n"
+"Last-Translator: Maik Lustenberger <maik.lustenberger@divio.ch>\n"
+"Language-Team: Bruno Bord <bruno@jehaisleprintemps.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: French\n"
+"X-Poedit-Country: FRANCE\n"
+
+#: admin.py:103
+msgid "The page was added successfully. Now you can create your content."
+msgstr "Page ajoutée avec succès. Vous pouvez à présent créer votre contenu."
+
+#: admin.py:105
+msgid "The page was updated successfully. You may edit it again below."
+msgstr "Cette page a été mise à jour avec succès. Vous pouvez de nouveau entrer en modification ci-dessous."
+
+#: admin.py:122
+msgid "tinymce app not found in sys.path. Is tinymce app installed?"
+msgstr "application tinymce non trouvée dans sys.path. Est-ce que tinymce est installé ?"
+
+#: admin.py:124
+msgid "Can not find tinymce helper script or app is misonfigured. Is tinymce app installed?"
+msgstr "Impossible de trouver le script \"helper\" pour tinymce ou l'application est mal paramétrée. Est-ce que l'application tinymce est installée ?"
+
+#: admin.py:135
+#: templates/cms/page_add.html:41
+msgid "Add"
+msgstr "Ajouter"
+
+#: admin.py:135
+msgid "Edit"
+msgstr "Modifier"
+
+#: admin.py:135
+#: models.py:118
+msgid "page"
+msgstr "page"
+
+#: admin.py:190
+msgid "The navigation was updated successfully. You may edit it again below."
+msgstr "La navigation a été mise à jour avec succès. Vous pouvez de nouveau entrer en modification ci-dessous."
+
+#: admin.py:193
+msgid "Your changes were discarded, because there must not be more than one root element. Make sure that there is only one root element."
+msgstr "Vos modifications ont été annulées, car il ne peut y avoir plus d'un élément racine. Merci de vous assurer qu'il n'y a qu'un seul élément racine."
+
+#: admin.py:200
+msgid "<li>Please <a href=\"../page/add/\">create a page</a> first.</li>"
+msgstr "<li>Merci de d'abord <a href=\"../page/add/\">créer une page</a>.</li>"
+
+#: admin.py:209
+msgid "Edit pages"
+msgstr "Modifier les pages"
+
+#: admin.py:222
+msgid "Please fill in some page content."
+msgstr "Merci de remplir le contenu de la page"
+
+#: admin.py:230
+msgid "<h2>Your form is not valid.</h2>"
+msgstr "<h2>Votre formulaire est invalide</h2>"
+
+#: admin.py:239
+msgid "This page content has been already removed. Please reload the page and try again."
+msgstr "Cette page a déjà été supprimée. Merci de rafraîchir la page et d'essayer de nouveau."
+
+#: cms_global_settings.py:63
+msgid "Default"
+msgstr "Défaut"
+
+#: forms.py:57
+msgid "Hold down \"Control\", or \"Command\" on a Mac, to select more than one."
+msgstr "Appuyez sur \"Control\", ou \"Commande\" sur un Mac, pour sélectionner plus d'un élément."
+
+#: forms.py:63
+msgid "This value must contain only letters, numbers, underscores or hyphens."
+msgstr "Cette valeur ne doit être composée que de lettres, chiffres, underscores et tirets."
+
+#: forms.py:98
+msgid "The template that will be used to render the page. Choose nothing if you don't need a custom template."
+msgstr "Le gabarit (template) utilisé pour afficher la page. Ne rien sélectionner si vous n'avez pas besoin d'un gabarit personnalisé."
+
+#: forms.py:99
+#: models.py:93
+msgid "start publishing"
+msgstr "début de publication"
+
+#: forms.py:99
+msgid "Enter a date (and time) on which you want to start publishing this page."
+msgstr "Entrer une date (et une heure) à partir de laquelle vous voulez publier la page."
+
+#: forms.py:100
+#: models.py:94
+msgid "finish publishing"
+msgstr "fin de publication"
+
+#: forms.py:100
+msgid "Enter a date after which you want to stop publishing this page."
+msgstr "Entrez une date après laquelle la publication de la page doit s'arrêter."
+
+#: forms.py:122
+msgid "Please reorder the root object on the hierarchy page."
+msgstr "Merci de réordonner l'objet racine dans la hiérarchie des pages."
+
+#: forms.py:124
+msgid "Please choose in which category the page should belong."
+msgstr "Merci de choisir la catégorie à laquelle cette page doit appartenir."
+
+#: forms.py:153
+msgid "language"
+msgstr "langue"
+
+#: forms.py:154
+msgid "position"
+msgstr "position"
+
+#: forms.py:155
+#: models.py:92
+msgid "is published"
+msgstr "est publié"
+
+#: forms.py:156
+msgid "Leave this empty to use the title of the page."
+msgstr "Laisser vide pour utiliser le titre de la page."
+
+#: forms.py:156
+#: models.py:83
+msgid "title"
+msgstr "titre"
+
+#: forms.py:157
+#: models.py:272
+msgid "Only specify this if you want to give this page content a specific slug."
+msgstr "À ne spécifier que si vous voulez donner à ce contenu un slug spécifique."
+
+#: forms.py:157
+#: models.py:84
+#: models.py:272
+msgid "slug"
+msgstr "slug"
+
+#: forms.py:158
+#: models.py:273
+msgid "Used for page title. Should be no longer than 150 chars."
+msgstr "Utilisé pour le titre de la page. Ne doit pas dépasser 150 caractères."
+
+#: forms.py:158
+msgid "page title"
+msgstr "titre de la page"
+
+#: forms.py:159
+#: models.py:274
+msgid "Comma separated"
+msgstr "Séparés par des virgules"
+
+#: forms.py:159
+#: models.py:274
+msgid "keywords"
+msgstr "mots-clés"
+
+#: forms.py:160
+msgid "description"
+msgstr "description"
+
+#: forms.py:161
+msgid "page topic"
+msgstr "sujet de la page"
+
+#: forms.py:162
+msgid "content"
+msgstr "contenu"
+
+#: forms.py:163
+msgid "content type"
+msgstr "type de contenu"
+
+#: forms.py:164
+msgid "allow template tags"
+msgstr "autoriser les \"template tags\""
+
+#: forms.py:165
+msgid "template (optional)"
+msgstr "gabarit (template) (optionnel)"
+
+#: forms.py:168
+msgid "New page content"
+msgstr "Nouveau contenu de page"
+
+#: forms.py:175
+#: templates/cms/base.html:20
+msgid "search"
+msgstr "recherche"
+
+#: models.py:40
+msgid "Please create at least one page."
+msgstr "Merci de créer au moins une page."
+
+#: models.py:83
+msgid "The title of the page."
+msgstr "Le titre de la page."
+
+#: models.py:84
+msgid "The name of the page that appears in the URL. A slug can contain letters, numbers, underscores or hyphens."
+msgstr "Le nom de la page apparaissant dans l'URL. Un \"slug\" peut contenir des lettres, des chiffres, des underscores ou des tirets."
+
+#: models.py:90
+msgid "Optional. Dotted path to a python function that receives two arguments (request, context) and can update the context."
+msgstr "Optionnel. Chemin séparé par des points vers une fonction python recevant deux arguments (request, context) et qui peut mettre à jour le contexte."
+
+#: models.py:92
+msgid "Whether or not the page is accessible from the web."
+msgstr "Définir si cette page est accessible ou non depuis le web."
+
+#: models.py:97
+msgid "Navigation"
+msgstr "Navigation"
+
+#: models.py:97
+msgid "The page will be appended inside the chosen category."
+msgstr "Cette page sera ajoutée à la catégorie choisie."
+
+#: models.py:99
+msgid "display in navigation"
+msgstr "afficher dans la navigation"
+
+#: models.py:102
+msgid "requires login"
+msgstr "nécessite connexion"
+
+#: models.py:102
+msgid "If checked, only logged-in users can view the page."
+msgstr "Si cochée, seuls les utilisateurs connectés pourront voir la page."
+
+#: models.py:119
+msgid "pages"
+msgstr "pages"
+
+#: models.py:252
+msgid "HTML"
+msgstr "HTML"
+
+#: models.py:253
+msgid "Markdown"
+msgstr "Markdown"
+
+#: models.py:254
+msgid "Textile"
+msgstr "Textile"
+
+#: models.py:255
+msgid "reStructuredText"
+msgstr "reStructuredText"
+
+#: models.py:256
+msgid "Plain text"
+msgstr "Texte brut"
+
+#: models.py:267
+msgid "Only specify this if you want to override the page template."
+msgstr "À ne spécifier que si vous voulez passer outre le gabarit de page (template)."
+
+#: models.py:271
+msgid "Used in navigation. Leave this empty to use the default title."
+msgstr "Utilisé dans la navigation. Laisser vide pour utiliser le titre par défaut."
+
+#: models.py:275
+#: models.py:276
+msgid "Keep between 150 and 1000 characters long."
+msgstr "Doit faire entre 150 et 1000 caractères."
+
+#: models.py:314
+msgid "published"
+msgstr "publiée"
+
+#: models.py:314
+msgid "unpublished"
+msgstr "dépubliée"
+
+#: views.py:169
+msgid "Please create at least one subpage or enable DISPLAY_ROOT."
+msgstr "Merci de créer au moins une sous-page ou d'activer DISPLAY_ROOT."
+
+#: views.py:223
+msgid "Please define LANGUAGES in your project's settings."
+msgstr "Merci de définir la variable LANGUAGES dans vos paramètres."
+
+#: decorators/json.py:17
+msgid "Received invalid data."
+msgstr "Données reçues incorrectes"
+
+#: templates/cms/base.html:16
+#: templates/cms/search.html:5
+msgid "Search"
+msgstr "Recherche"
+
+#: templates/cms/base.html:23
+msgid "main menu"
+msgstr "menu principal"
+
+#: templates/cms/base.html:31
+msgid "sub pages"
+msgstr "sous-pages"
+
+#: templates/cms/field.html:7
+msgid "Help"
+msgstr "Aide"
+
+#: templates/cms/navigation.html:13
+#: templates/cms/page_add.html:38
+msgid "Home"
+msgstr "Accueil"
+
+#: templates/cms/navigation.html:20
+msgid "Add page"
+msgstr "Ajouter une page"
+
+#: templates/cms/navigation.html:23
+#: templates/cms/page_add.html:60
+msgid "Note"
+msgstr "Note"
+
+#: templates/cms/navigation.html:23
+msgid "You will have to activate JavaScript in your browser's settings to be able to reorder the pages."
+msgstr "Votre navigateur doit permettre l'exécution de Javascript pour réordonner les pages."
+
+#: templates/cms/navigation.html:26
+msgid "Manage Pages"
+msgstr "Gérer les pages"
+
+#: templates/cms/navigation.html:27
+msgid "Here you can edit the pages of your site. Drag and drop the pages to change their order or hierarchy. Note that changing the hierarchy will affect the URL of the pages. Click on a page to edit it. If you uncheck the \"in navigation\" field, the page will not be displayed in the automatically generated navigation. Note that deleting a page will delete its subpages, if you don't reorder them."
+msgstr "Ici vous pouvez saisir les pages de votre site. Glissez-déplacez ces pages pour changer leur ordre ou leur hiérarchie. Notez que modifier leur hiérarchie affectera l'URL des pages. Cliquez sur une page pour la modifier. Si vous décochez la case #dans la navigation\", cette page n'apparaîtra pas dans la navigation automatique. Veuillez noter que supprimer une page supprimera également ses sous-pages, si vous ne lez avez pas réordonnées préalablement."
+
+#: templates/cms/navigation.html:43
+#: templates/cms/page_submit_row.html:4
+msgid "Add this page"
+msgstr "Ajouter cette page"
+
+#: templates/cms/navigation.html:43
+#: templates/cms/page_submit_row.html:4
+msgid "Save all changes"
+msgstr "Enregistrer toutes les modifications"
+
+#: templates/cms/navigation_item.html:6
+msgid "In navigation"
+msgstr "Dans la navigation"
+
+#: templates/cms/navigation_item.html:8
+msgid "Is published"
+msgstr "Est publié(e)"
+
+#: templates/cms/navigation_item.html:9
+msgid "Edit page"
+msgstr "Modifier la page"
+
+#: templates/cms/navigation_item.html:10
+msgid "View"
+msgstr "Voir"
+
+#: templates/cms/navigation_item.html:11
+#: templates/cms/page_submit_row.html:3
+msgid "Delete"
+msgstr "Supprimer"
+
+#: templates/cms/navigation_item.html:13
+msgid "Move"
+msgstr "Déplacer"
+
+#: templates/cms/navigation_item.html:17
+msgid "ID"
+msgstr "ID"
+
+#: templates/cms/page_add.html:52
+msgid "Page Info"
+msgstr "Informations de la page"
+
+#: templates/cms/page_add.html:60
+msgid "You will have to activate JavaScript in your browser's settings to be able to edit page content."
+msgstr "Votre navigateur doit permettre l'exécution de Javascript pour modifier le contenu de la page."
+
+#: templates/cms/page_add.html:61
+msgid "Add page content"
+msgstr "Ajouter un contenu"
+
+#: templates/cms/page_add.html:67
+msgid "Publishing Info"
+msgstr "Informations de publication"
+
+#: templates/cms/page_add.html:69
+msgid "This page is already in the navigation (<a href=\"../../navigation/\">edit navigation</a>):"
+msgstr "Cette page est déjà dans la navigation (<a href=\"../../navigation/\">modifier la navigation</a>) :"
+
+#: templates/cms/page_add.html:92
+#: templates/cms/page_add.html.py:94
+msgid "Add-ons"
+msgstr "Greffons"
+
+#: templates/cms/pagecontent_form.html:5
+msgid "Properties"
+msgstr "Propriétés"
+
+#: templates/cms/pagecontent_form.html:9
+msgid "Show advanced options"
+msgstr "Montrer les options avancées"
+
+#: templates/cms/pagecontent_form.html:9
+msgid "Hide advanced options"
+msgstr "Masquer les options avancées"
+
+#: templates/cms/pagecontent_form.html:12
+msgid "Advanced"
+msgstr "Avancé"
+
+#: templates/cms/pagecontent_form.html:18
+msgid "SEO"
+msgstr "SEO"
+
+#: templates/cms/pagecontent_form.html:31
+msgid "Actions"
+msgstr "Actions"
+
+#: templates/cms/pagecontent_form.html:32
+msgid "Preview this page"
+msgstr "Prévisualiser cette page"
+
+#: templates/cms/pagecontent_form.html:32
+msgid "Previews this page in a new window without saving it."
+msgstr "Prévisualiser cette page dans une nouvelle fenêtre sans l'enregistrer"
+
+#: templates/cms/pagecontent_form.html:33
+msgid "Preview"
+msgstr "Prévisualisation"
+
+#: templates/cms/pagecontent_form.html:34
+msgid "(in a new window without saving it)"
+msgstr "(dans une nouvelle fenêtre sans l'enregistrer)"
+
+#: templates/cms/pagecontent_form.html:37
+msgid "Delete this content"
+msgstr "Supprimer ce contenu"
+
+#: templates/cms/search.html:11
+msgid "Search results"
+msgstr "Résultats de la recherche"
+
+#: templates/cms/search.html:12
+msgid "for"
+msgstr "pour"
+
+#: templates/cms/search.html:19
+msgid "Articles found in other languages"
+msgstr "Articles trouvés dans d'autres langues"
+
+#: templates/cms/search.html:27
+msgid "Sorry, no articles were found."
+msgstr "Désolé, aucun article correspondant"
+
+#: templatetags/cms_base.py:195
+msgid "Unknown"
+msgstr "Inconnu"
+
+#: templatetags/cms_base.py:197
+msgid "Yes"
+msgstr "Oui"
+
+#: templatetags/cms_base.py:199
+msgid "No"
+msgstr "Non"
+
